@@ -1,0 +1,121 @@
+\documentclass{article}
+\input{preamble.tex}
+\begin{document}
+
+\section{Domains, Graphs and Level Sets}
+
+\subsection{Domain of definition}
+A function may not be defined for all real numbers.
+
+\begin{eg}
+    \( f(x) = \frac{1}{x}  \) is not defined for \( x=0 \)
+\end{eg}
+
+\begin{definition}
+    The domain of a function \( f \) is the set of numbers for which it is defined. We write the domain of \( f \) as \( D_{f} \).
+\end{definition}
+
+For instance, for \( f(x) = \frac{1}{x}\) we have that
+
+\[ D_{f} = \left\{ x \in \R: x \neq\right\} \]
+
+This is the lasrgerst possible domain, we can also consider smaller domains. We have the interval from 1 to 2.
+
+\[ \left[ 1,2 \right] = \left\{ x \in \R: 1 \leq x \leq 2 \right\} \]
+
+\begin{eg}
+    Find the largest domain of \( f(x,y) = \frac{1}{y-x}  \). The denominator should be non-zero, we get
+
+    \[ D_{f} = \left\{ \left( x,y \right)\in \R^2:y-x \neq 0 \right\} \]
+\end{eg}
+
+\begin{eg}
+    Same excersise with \( f(x,y) = \sqrt{y-x^2} \).
+    
+    Argument: \( y-x^2 \geq 0 \) (because square root). We will then have \( y \geq x^2 \)
+\end{eg}
+
+\subsection{Graphs of functions}
+The plot of a function \( f \) descrives its behaviour visually. Mathematically, a plot corresponds to the notion of a graph.
+
+\begin{definition}
+    The graph of a function \( f(x,y) \) with domain \( D_{f} \) is the set of points \( \left( x,y,z \right) \) such that:
+
+    \[ \left( x,y \right) \in D_{f} \text{ and } z = f(x,y) \]
+
+    We write \( G_{f} \) for the set
+
+    \[ G_{f} = \left\{ \left( x,y,z \right) \in \R^3: \left( x,y \right) \in D_{f} \text{ and } z = f\left( x,y \right) \right\} \]
+
+    The graph of a function of two variables will, in general, be a surface.
+\end{definition}        
+
+\begin{eg}
+    Lets consider \( f(x,y)=1 \), with domain \( \R^2 \). The graph of \( f \) is:
+
+    \[ G_{f} = \left\{ \left( x,y,1 \right):\left( x,y \right)\R^2 \right\} \] 
+    All points have \( z = 1 \), this is a plane. More generally, the graph of\( f(x,y) = ax + by + c \) is a plane with linear dependence on \( x \text{ and } y \).
+\end{eg}
+\bigskip
+
+\begin{eg}
+    Consider the graph of:
+
+    \[ f(x,y) = x^2+y^2,\quad D_{F}= \R^2 \]
+
+    This surface is called a parabloids.
+\end{eg}
+\bigskip
+
+\begin{eg}
+    A sphere of radius \( r \) is defined by
+
+    \[ x^2 + y^2 + z^2 = r^2 \]
+
+    All points \( x,y,z \) satisfy the equation.
+\end{eg}
+
+Is this the graph of a function? No!
+
+There is no unique value of \( z \), associated with \( \left( x,y \right) \) because:
+
+\[ z = \pm \sqrt{r^2 - x^2 -y^2} \]
+
+
+Both satisfy the sphere equation. Lets consider the graph of
+
+\[ f(x,y) = \sqrt{r^2 - x^2 -y^2} \]
+
+With the domain \( x^2+y^2 \leq r^2 \). The grap is a half sphere.
+
+\subsection{Level Sets}
+
+Another way to visualize functions.
+
+\begin{definition}
+    A level set of a function \( f(x,y) \) is constant. Essentialy, this is a topographic map.
+\end{definition}
+
+\begin{eg}
+    Consider the function
+
+    \[ f(x,y) = x^2 + y^2 \]
+
+    The level sets for \( c > 0 \) are circles.
+
+    \[ f(x,y) = x^2 +y^2 = c = \left( \sqrt{c} \right)^2\]
+
+    This is a circle with radius \( \sqrt{c} \).
+
+    Now consider the case \( c < 0 \), then:
+
+    \[ f\left( x,y \right) = x^2 + y^2 = c \]
+
+    which doesn't work, because the level sets are empty.
+
+    For \( c = 0 \), we only have the point \( \left( x,y \right) = \left( 0,0 \right) \). Generally, level sets of \( f(x,y) \) is a curve.
+
+\end{eg}
+
+\end{document}
+

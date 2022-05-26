@@ -1,0 +1,59 @@
+\documentclass{article}
+\input{preamble.tex}
+\begin{document}
+\section{Lecture 3}
+
+\subsection{Partial Derivatives}
+
+In the case of one variable, we have
+
+\[ \frac{d f}{dt} = \lim_{n\rightarrow 0} \frac{f\left( x+n \right) - f(x)}{n} \]
+
+Similarily, for two of more variables, we have the following definition
+
+\begin{definition}
+    The partial derivative of \( f\left( x,y \right) \) with respect to x:
+
+    \[ \frac{\partial f}{\partial x} = \lim_{n\rightarrow 0} \frac{f\left( x + n,y \right) - f\left( x,y \right)}{n} \]
+
+    Also written as \( f_{x} \), for \( \frac{\partial f}{\partial y} \), we have \( f_{y} \)
+\end{definition}
+
+Note, the expression above is \( \frac{\partial f}{\partial x}(x,y) \), which is the value at the point \( \left( x,y \right) \)
+
+\subsection{Higher order derivatives}
+
+Given \( \frac{\partial f}{\partial x} \), we can take further derivatives. We have
+
+\[ \frac{\partial^2 f }{\partial^2 x} =\frac{\partial }{\partial x} \left( \frac{\partial f}{\partial x} \right),\quad \frac{\partial^2 f }{\partial x\partial y} = \frac{\partial }{\partial y}\left( \frac{\partial f}{\partial x} \right)\]
+
+Also written as \( f_{xx}, f_{yy}, f_{xy}, f_{yx} \). In most cases, \( f_{xy} \text{ and } f_{yx} \) coincide.
+
+\begin{theorem}
+    Scwartz theorem: Suppose \( f_{xy} \text{ and } f_{yx} \) exist, and are continous, then
+
+    \[ f_{xy} = f_{yx} \]
+\end{theorem}
+
+Similar definitions and results for the case of more variables: \( x_{1} , \ldots , x_{n} \), with \( n \) variables.
+
+\subsection{Chain Rule}
+Suppose \( f(x) = g(h(x)) \), for instance
+
+\[ f(x) = \left( \cos x \right)^2 \text{ with } g(x)=x^2, h(x)=\cos x \]
+
+then the chain rule is
+
+\[ \frac{d f}{dt}\left( x_{0}  \right) = \frac{d g}{dh}\left( h\left( x_{0}  \right) \right) \cdot \frac{d h}{dt}\left( x_{0}  \right) \]
+
+Generalization to more variables.
+
+\begin{theorem}
+    Chain rule: consider \( f\left( x,y \right) \) \( x \text{ and } y \) depending on a variable \( t \). Then:
+
+    \[ \frac{d f}{dt}t_{0} = \frac{\partial f}{\partial x}\left( x\left( t_{0}  \right), y\left( t_{0}  \right) \right)\frac{d x}{dt}t_{0} + \frac{\partial f}{\partial y}\left( x\left( t_{0}  \right), y\left( t_{0}  \right) \right)\frac{d y}{dt}t_{0}  \]
+
+
+
+\end{theorem}
+\end{document}
