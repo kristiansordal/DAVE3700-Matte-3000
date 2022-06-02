@@ -7,16 +7,16 @@
 We have seen the following
 
 \begin{itemize}
-    \item \( f_{x} =  \) the rate of change along the \( x- \)direction.
-    \item \( f_{y} =  \) the rate of change along the \( y- \)direction.
+	\item \( f_{x} =  \) the rate of change along the \( x- \)direction.
+	\item \( f_{y} =  \) the rate of change along the \( y- \)direction.
 \end{itemize}
 
 What about general directions?
 
 \begin{definition}
-    Let \( \vec{u} = \left( a,b \right) \), the directional derivative along \( \vec{u} \text{ at } \left( x,y \right) \) is
+	Let \( \vec{u} = \left( a,b \right) \), the directional derivative along \( \vec{u} \text{ at } \left( x,y \right) \) is
 
-    \[ D_{\vec{u}}f\left( x,y \right) = \lim_{h\rightarrow 0} \frac{f\left( x+ha,y+hb \right) - f\left( x,y \right)}{h}  \]
+	\[ D_{\vec{u}}f\left( x,y \right) = \lim_{h\rightarrow 0} \frac{f\left( x+ha,y+hb \right) - f\left( x,y \right)}{h}  \]
 \end{definition}
 
 Note that
@@ -29,72 +29,72 @@ To compare directions, we take \( \left| \vec{t} \right| = 1 \). Here \( \vec{u}
 \[ \left| \vec{u} \right|=\sqrt{\vec{u}\cdot \vec{u}} \]
 
 \begin{prop}
-    We have the following result
+	We have the following result
 
-    \[ D_{\vec{u}}\cdot  f = \nabla f \cdot  \vec{u} \]
+	\[ D_{\vec{u}}\cdot  f = \nabla f \cdot  \vec{u} \]
 \end{prop}
 
-    
+
 \begin{proof}
-    Consider the following function
+	Consider the following function
 
-    \[ g\left( t \right) = f\left( x+ta, y+tb \right) \]
+	\[ g\left( t \right) = f\left( x+ta, y+tb \right) \]
 
-    Its derivative at \( t=0 \) is
+	Its derivative at \( t=0 \) is
 
-    \begin{align*}
-        \frac{d g}{dt}\left( 0 \right)&=\lim_{h\rightarrow 0} \frac{g\left( h \right)-g\left( 0 \right)}{h} \\
-                                      &= \lim_{h\rightarrow 0} \frac{f\left( x+ha,y+hb \right)-f\left( x,y \right)}{h} \\
-                                      &= D_{\vec{u}} \cdot f\left( x,y \right)
-    \end{align*}
+	\begin{align*}
+		\frac{d g}{dt}\left( 0 \right) & =\lim_{h\rightarrow 0} \frac{g\left( h \right)-g\left( 0 \right)}{h}            \\
+		                               & = \lim_{h\rightarrow 0} \frac{f\left( x+ha,y+hb \right)-f\left( x,y \right)}{h} \\
+		                               & = D_{\vec{u}} \cdot f\left( x,y \right)
+	\end{align*}
 
-    On the other hand, using the chain rule, we get
+	On the other hand, using the chain rule, we get
 
-    \begin{align*}
-        \frac{d g}{dt}\left( 0 \right) &= \frac{\partial f}{\partial x}\frac{d \left( x+ta \right)}{dt} + \frac{\partial f}{\partial y}\frac{d \left( y+tb \right)}{dt} \\
-                                       &= \frac{\partial f}{\partial x}a+\frac{\partial f}{\partial y}b = \nabla f \cdot  \vec{u}
-    \end{align*}
+	\begin{align*}
+		\frac{d g}{dt}\left( 0 \right) & = \frac{\partial f}{\partial x}\frac{d \left( x+ta \right)}{dt} + \frac{\partial f}{\partial y}\frac{d \left( y+tb \right)}{dt} \\
+		                               & = \frac{\partial f}{\partial x}a+\frac{\partial f}{\partial y}b = \nabla f \cdot  \vec{u}
+	\end{align*}
 \end{proof}
 
 We can now state another property of \( \nabla f \). The direction where \( f \) changes the most.
 
 \begin{prop}
-    \( \left| D_{\vec{u}}\cdot f \right| \) is the largest when \( \vec{u} \) is paralell to \( \nabla f \).
+	\( \left| D_{\vec{u}}\cdot f \right| \) is the largest when \( \vec{u} \) is paralell to \( \nabla f \).
 \end{prop}
 \begin{proof}
-    Recall that, given two vectors, \( \vec{v} \) and \( \vec{w} \), we have that
+	Recall that, given two vectors, \( \vec{v} \) and \( \vec{w} \), we have that
 
-    \[ \vec{v}\cdot \vec{w} = \left| \vec{v} \right|\cdot \left| \vec{w} \right|\cdot \cos \alpha \]
-
-
-    When is \( \left| \vec{v}\cdot \vec{w} \right| \) the largest? We have
-
-    \[ \left| \vec{v}\cdot \vec{w} \right| = \left| \vec{v} \right| \cdot  \left| \vec{w} \right|\cdot \left| \cos\alpha \right|, \quad \left| \cos\alpha \right|\leq1\]
-
-    It is the largest when the following condition is true
-
-    \[ \left| \cos\alpha \right| = 1, \quad \alpha=0 \vee \pi \]
-
-    Which means that the vectores are pointing in the same, or opposite direction. Applying this to \( D_{\vec{u}}\cdot  f \), we get
+	\[ \vec{v}\cdot \vec{w} = \left| \vec{v} \right|\cdot \left| \vec{w} \right|\cdot \cos \alpha \]
 
 
-    \begin{align*}
-        \left| D_{\vec{u}} \cdot  f\right| &= \left| \nabla f \cdot  \vec{u} \right| \\
-                                   &= \left| \nabla f \right| \cdot \left| \vec{u} \right|\cdot \left| \cos\alpha \right| 
-    \end{align*}
+	When is \( \left| \vec{v}\cdot \vec{w} \right| \) the largest? We have
 
-    For fixed values of \( \left| \vec{u} \right|  \), this is the largest when \(\alpha = 0 \vee \pi \). That is \( \nabla f \) and \( \vec{u} \) are paralell.
+	\[ \left| \vec{v}\cdot \vec{w} \right| = \left| \vec{v} \right| \cdot  \left| \vec{w} \right|\cdot \left| \cos\alpha \right|, \quad \left| \cos\alpha \right|\leq1\]
+
+	It is the largest when the following condition is true
+
+	\[ \left| \cos\alpha \right| = 1, \quad \alpha=0 \vee \pi \]
+
+	Which means that the vectores are pointing in the same, or opposite direction. Applying this to \( D_{\vec{u}}\cdot  f \), we get
+
+
+	\begin{align*}
+		\left| D_{\vec{u}} \cdot  f\right| & = \left| \nabla f \cdot  \vec{u} \right|                                              \\
+		                                   & = \left| \nabla f \right| \cdot \left| \vec{u} \right|\cdot \left| \cos\alpha \right|
+	\end{align*}
+
+	For fixed values of \( \left| \vec{u} \right|  \), this is the largest when \(\alpha = 0 \vee \pi \). That is \( \nabla f \) and \( \vec{u} \) are paralell.
 \end{proof}
 
 \subsection{Critical Points}
 How do we find the maxima and minima of \( f\left( x \right) \)? Lets take a look at \( f'\left( x_{0}  \right) = 0 \).
 
 \begin{definition}
-    We say that \( x_{0} ,y_{0}  \) is a critical point of \( f \) if:
+	We say that \( x_{0} ,y_{0}  \) is a critical point of \( f \) if:
 
-    \[ \frac{\partial f}{\partial x}\left( x_{0} ,y_{0}  \right) = 0 \quad\wedge\quad \frac{\partial f}{\partial y}\left( x_{0} , y_{0}  \right)= 0 \]
+	\[ \frac{\partial f}{\partial x}\left( x_{0} ,y_{0}  \right) = 0 \quad\wedge\quad \frac{\partial f}{\partial y}\left( x_{0} , y_{0}  \right)= 0 \]
 \end{definition}
 
-Similarily for
+Similarily for this
 
 \end{document}
