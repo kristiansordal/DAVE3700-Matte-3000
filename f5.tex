@@ -1,0 +1,158 @@
+\documentclass{article}
+    \input{preamble.tex}
+\begin{document}
+\section{Lecutre 5}
+\subsection{Hessian Matrix}
+\begin{eg}
+	Consider again the function \( f\left( x,y \right) = x^2-y^2 \).
+
+	\[ f_{xx} = 2, \quad f_{yy} = -2, \quad f_{yx} = 0 \]
+
+	\[ H = \begin{bmatrix}
+			2 & 0  \\
+			0 & -2
+		\end{bmatrix} = \text{det } H = -4 < 0 \]
+
+	Hence \( \left( x_{0} , y_{0}  \right) \) is a saddle point.
+\end{eg}
+\bigskip
+
+\begin{eg}
+	Consider the function \( f\left( x,y \right) = x^2+y^2 \), we have
+
+	\[ \left( f_{x}, f_{y} \right) = \left( 2x,2y \right) \]
+
+	The only critical point is \( \left( x_{0}, y_{0}  \right) = \left( 0,0 \right) \).
+
+	\[ H = \begin{bmatrix}
+			2 & 0 \\
+			0 & 2
+		\end{bmatrix} = \text{det } H = 4 > 0 \]
+
+	Since \( f_{xx} = 2 > 0 \), we conclude that \( \left( 0,0 \right) \) is a local minima. In this case, it is actually a global minimum, because \( f\left( x,y \right) = x^2 + y^2 \geq 0 \).
+\end{eg}
+\subsection{Global extremal values}
+A function can have many maxima and minimas. Usually, we are intrested in the largest and smallest values.
+
+\begin{definition}
+	Let \( f\left( x,y \right) \) be with domain \( D_{f} \). Then we have
+
+	\begin{itemize}
+		\item \( \left( x_{0} , y_{0}  \right) \) is a global maxima if \( f\left( x_{0} , y_{0}  \right) \geq f\left( x,y \right) \) for all \( \left( x,y \right) \in D_{f} \).
+
+		\item \( \left( x_{0} , y_{0}  \right) \) is a global minima if \( f\left( x_{0} ,y_{0}  \right) \geq f\left( x,y \right) \) for all \( \left( x,y \right)\in D_{f} \).
+	\end{itemize}
+\end{definition}
+
+Trivial example: for \( f\left( x,y \right) = 1 \), all points are global maxima and minima.
+\medskip
+
+Note that global maxima and minima need not be critical points.
+\medskip
+
+\begin{eg}
+	We have \( f(x) = x \) with \( D_{f} = \left[ -1,1 \right] \).
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{0.5\textwidth}
+		\import{./figures/}{figtest.pdf_tex}
+		\caption{\( f(x) \)}
+		\label{fig:mk}
+	\end{figure}
+
+	\begin{itemize}
+		\item Global maxima at \( x=1, f\left( 1 \right) = 1 \).
+		\item Global minima at \( x=-1, f\left( -1 \right)=-1 \)
+	\end{itemize}
+
+	We have no critical points because \( f'\left( x \right) = 1 \neq 0 \). Also not that maxima and minima depend on the chosen domain.
+	\medskip
+
+	If we take \( D_{f} = \left[-2,3  \right] \), then
+
+	\[ \text{Max: } x= 3, \quad \text{Min: }x=-2 \]
+\end{eg}
+
+\begin{theorem}
+	Let \( f \) be continous with domain \( D_{f} \). Suppose \( D_{f} \) is closed and bounded, then there is at least one global maxima, and one global minima.
+	\medskip
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{0.5\textwidth}
+		\import{./figures/}{fig2.pdf_tex}
+		\caption{The circle is the boundary.}
+		\label{fig:The circle is the boundary.}
+	\end{figure}
+
+	Some terminology:
+
+	\[ \text{open } = \left\{ x^2+y^2 < 1 \right\} \]
+	\[ \text{closed }= \left\{ x^2+y^2 \leq 1 \right\} \]
+\end{theorem}
+
+The method for finding maxima and minima is as follows:
+\begin{enumerate}
+	\item Find critical points of \( f \) in \( D_{f} \), and characterize them.
+	\item Study the points that are on the boundary.
+	\item Compare them.
+\end{enumerate}
+
+\begin{eg}
+	Consider \( f\left( x,y \right)=x^2+y^2 \) with domain
+
+	\[ D = \left\{ \left( x,y \right)\in \R: x^2 + y^2 \leq 1 \right\} \]
+
+	The domain in this case is a disc. The red circle is the boundary.
+	\medskip
+
+	We compute \( f_{x}=2x, f_{y}=2y \). The only critical point is the origin at \( \left( x_{0} , y_{0}  \right) = \left( 0,0 \right) \). This is a global minium since \( f\left( 0,0 \right) \text{ and } f\left( x,y \right)\geq 0 \).
+	\medskip
+
+	Now, lets consider the boundary
+
+	\[ C = \left\{ x^2+y^2=1 \right\} \]
+
+	For any point \( \left( x_{0} ,y_{0}  \right) \) on the circle \( C \), we have
+
+	\[ f\left( x_{0} , y_{0}  \right) = x_{0} ^2 + y_{0} ^2 = 1 \]
+
+	We claim that this point is a global maximum. For any \( \left( x,y \right) \) in domain \( D_{f} \), we have
+
+	\[ f\left( x,y \right) = x^2+y^2 \leq 1 \]
+
+	The value \( f\left( x,y \right)=1 \) is obtain only at the boundary \( C \). Any point on the circle is a global maxima.
+\end{eg}
+
+\subsection{Constrained optimization}
+In this section, we will discuss how to find maxima and minima of \( f\left(x,y \right) \) with constraint \( g\left( x,y \right) = 0 \). Think of \( g=0 \) ad a budget, or a geometrical constraint.
+
+\begin{eg}
+	We want to minimize \( f\left( x,y \right)=x^2+y^2 \) with the constraint \( g\left( x,y \right) = xy-1 = 0 \).
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{0.5\textwidth}
+		\import{./figures/}{fig3.pdf_tex}
+		\caption{\( y=\frac{1}{x}  \)}
+		\label{fig:}
+	\end{figure}
+
+	We have the following strategy
+
+	\begin{itemize}
+		\item Solve \( g=0 \) for one variable. For instance \( y= \frac{1}{x}  \).
+		\item Consider: \( h(x)=f\left( x,\frac{1}{x}  \right)=x^2+x^{-2} \)
+	\end{itemize}
+
+	Now we can study this function of one variable with no constraints. We can proceed as usual.
+
+	\[ \frac{d h}{dt}=2x-2x^{-3} = 0 \]
+
+	This is equivalent to \( x^{4}=1 \). The real solutions are \( x=\pm 1 \). Since \( y=\frac{1}{x}  \), we get the critical points:
+
+	\[ \left( x,y \right) = \left( 1,1 \right), \quad \left( x,y \right) = \left( -1,-1 \right) \]
+\end{eg}
+\end{document}
+

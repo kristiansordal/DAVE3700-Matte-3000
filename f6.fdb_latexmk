@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1653932755 "f3.tex" "f3.pdf" "f3" 1653932756
+["pdflatex"] 1654024262 "f6.tex" "f6.pdf" "f6" 1654024263
   "/etc/texmf/web2c/texmf.cnf" 1653853381 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -199,10 +199,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1653925336 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1653925380 2802407 a265ffc69db6c6b9fcbd2df47e7910bc ""
-  "f3.aux" 1653932756 677 c511c342008b2141f4f86f0efc75bd6b "pdflatex"
-  "f3.tex" 1653932753 3355 9fd8861001ad0690e660eec0be262f36 ""
-  "preamble.tex" 1653925459 4990 322f090b7f84a03fb3f0be8daf49e0e9 ""
+  "f6.aux" 1654024263 689 736fa4f79dfcf0bf7f48b367946b41ff "pdflatex"
+  "f6.tex" 1654024261 1614 b2a2ede498828a9184c32197e603eb64 ""
+  "figures//fig4.pdf" 1654020536 1600 b0e2f33b935bcb222bcb30cd6275976f ""
+  "figures//fig5.pdf" 1654024050 1502 c11f54292fb45cb0c42e2389b24023df ""
+  "figures/fig4.pdf_tex" 1654020536 2197 635a3d102a10a9a35d48828870c8f0f1 ""
+  "figures/fig5.pdf_tex" 1654024050 2631 5b1ca4d236f6d3b2cc0e4b20435f35a8 ""
+  "preamble.tex" 1654017557 5076 e27a669c4e6cef6c8f1de9439f629c6c ""
   (generated)
-  "f3.aux"
-  "f3.log"
-  "f3.pdf"
+  "f6.aux"
+  "f6.log"
+  "f6.pdf"

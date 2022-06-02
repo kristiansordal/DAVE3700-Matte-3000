@@ -12,11 +12,11 @@ In the case of one variable, we have
 Similarily, for two of more variables, we have the following definition
 
 \begin{definition}
-    The partial derivative of \( f\left( x,y \right) \) with respect to x:
+	The partial derivative of \( f\left( x,y \right) \) with respect to x:
 
-    \[ \frac{\partial f}{\partial x} = \lim_{n\rightarrow 0} \frac{f\left( x + n,y \right) - f\left( x,y \right)}{n} \]
+	\[ \frac{\partial f}{\partial x} = \lim_{n\rightarrow 0} \frac{f\left( x + n,y \right) - f\left( x,y \right)}{n} \]
 
-    Also written as \( f_{x} \), for \( \frac{\partial f}{\partial y} \), we have \( f_{y} \)
+	Also written as \( f_{x} \), for \( \frac{\partial f}{\partial y} \), we have \( f_{y} \)
 \end{definition}
 
 Note, the expression above is \( \frac{\partial f}{\partial x}(x,y) \), which is the value at the point \( \left( x,y \right) \)
@@ -30,9 +30,9 @@ Given \( \frac{\partial f}{\partial x} \), we can take further derivatives. We h
 Also written as \( f_{xx}, f_{yy}, f_{xy}, f_{yx} \). In most cases, \( f_{xy} \text{ and } f_{yx} \) coincide.
 
 \begin{theorem}
-    Scwartz theorem: Suppose \( f_{xy} \text{ and } f_{yx} \) exist, and are continous, then
+	Scwartz theorem: Suppose \( f_{xy} \text{ and } f_{yx} \) exist, and are continous, then
 
-    \[ f_{xy} = f_{yx} \]
+	\[ f_{xy} = f_{yx} \]
 \end{theorem}
 
 Similar definitions and results for the case of more variables: \( x_{1} , \ldots , x_{n} \), with \( n \) variables.
@@ -49,9 +49,9 @@ then the chain rule is
 Generalization to more variables.
 
 \begin{theorem}
-    Chain rule: consider \( f\left( x,y \right) \) \( x \text{ and } y \) depending on a variable \( t \). Then:
+	Chain rule: consider \( f\left( x,y \right) \) \( x \text{ and } y \) depending on a variable \( t \). Then:
 
-    \[ \frac{d f}{dt}t_{0} = \frac{\partial f}{\partial x}\left( x\left( t_{0}  \right), y\left( t_{0}  \right) \right)\frac{d x}{dt}t_{0} + \frac{\partial f}{\partial y}\left( x\left( t_{0}  \right), y\left( t_{0}  \right) \right)\frac{d y}{dt}t_{0}  \]
+	\[ \frac{d f}{dt}t_{0} = \frac{\partial f}{\partial x}\left( x\left( t_{0}  \right), y\left( t_{0}  \right) \right)\frac{d x}{dt}t_{0} + \frac{\partial f}{\partial y}\left( x\left( t_{0}  \right), y\left( t_{0}  \right) \right)\frac{d y}{dt}t_{0}  \]
 \end{theorem}
 
 The "short form" of this result is
@@ -59,32 +59,30 @@ The "short form" of this result is
 \[ \frac{d f}{dt} = \frac{\partial f}{\partial x}\frac{d x}{dt} + \frac{\partial f}{\partial y}\frac{d y}{dt} \]
 
 \begin{eg}
-    Consiter \( f\left( x,y \right) = xy \), where
+	Consiter \( f\left( x,y \right) = xy \), where
 
-    \[ x(t) = \cos t, y(t) = \sin t\]
+	\[ x(t) = \cos t, y(t) = \sin t\]
 
-    This cannot be computed directly with \( \frac{d f}{dt} \).
+	This cannot be computed directly with \( \frac{d f}{dt} \).
 
-    \[ f(t)=f\left( x\left( t \right),y\left( t \right) \right) = f\left( \cos t, \sin t \right) = \cos t \cdot  \sin t \]
+	\[ f(t)=f\left( x\left( t \right),y\left( t \right) \right) = f\left( \cos t, \sin t \right) = \cos t \cdot  \sin t \]
 
-    We can compute
+	We can compute
 
-    \[ \frac{d f}{dt}=\left( \cos t \right)' \sin t + \cos t(\sin t)' = -\left( \sin t \right)^2 + \left( \cos t \right)^2\]  
+	\[ \frac{d f}{dt}=\left( \cos t \right)' \sin t + \cos t(\sin t)' = -\left( \sin t \right)^2 + \left( \cos t \right)^2\]
 
-    Usin the chain rule, we get
-    \begin{align*}
-        \frac{d f}{dt} &j= \frac{\partial f}{\partial x}\frac{d x}{dt} + \frac{\partial f}{\partial y}\frac{d y}{dt} \\
-    \end{align*}
+	Usin the chain rule, we get
+	\begin{align*}
+		\frac{d f}{dt} & j= \frac{\partial f}{\partial x}\frac{d x}{dt} + \frac{\partial f}{\partial y}\frac{d y}{dt} \\
+	\end{align*}
 \end{eg}
 
 \subsection{The Gradient}
 Define an operation that takes a scalar function, and returns a vector function.
 
 \begin{definition}
-    The gradient of \( f\left( x,y \right) \text{ at }\left( x_{0} , y_{0}  \right) \) is
+	The gradient of \( f\left( x,y \right) \text{ at }\left( x_{0} , y_{0}  \right) \) is
 
-    \[ \nabla f\left( x_{0} , y_{0}  \right) = \left( f_{x}\left( x_{0} , y_{0}  \right), f_{y}(x_{0} , y_{0} ) \right) \]
+	\[ \nabla f\left( x_{0} , y_{0}  \right) = \left( f_{x}\left( x_{0} , y_{0}  \right), f_{y}(x_{0} , y_{0} ) \right) \]
 \end{definition}
-
 \end{document}
-

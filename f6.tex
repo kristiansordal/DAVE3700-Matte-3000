@@ -1,0 +1,43 @@
+\documentclass{article}
+\input{preamble.tex}
+\begin{document}
+\section{Lecture 6}
+\subsection{Substitution Method}
+We want to maximize / minimize \( f\left( x,y \right) \) with constraint \( g\left( x,y \right)=0 \). We can solve \( g\left( x,y \right)=0 \) for one variable \( y=y\left( x \right) \).
+\medskip
+
+\begin{eg}
+	Consider \( f\left( x,y \right) = x^2 + y^2 \) and \( g\left( x,y \right) = xy-1 =0\). In this case, we have \( f=\frac{1}{x}  \) from \( g = 0 \), we get
+
+	\[ h(x)=f\left( x,x^{-1} \right) = x^2+x^{-2} \]
+
+	We have found the minima at \( \left( 1,1 \right) \text{ and } \left( -1,-1 \right) \).
+\end{eg}
+
+This method isn't always feasible, so lets look at some alternatives.
+
+\subsection{Lagrange's Method}
+\begin{eg}
+	Lets look at the level curves, which are circles. We have the that \( f\left( x,y \right) = x^2 + y^2 = c \).
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig4.pdf_tex}
+		\caption{\( f\left( x,y \right) \)}
+		\label{fig:mk}
+	\end{figure}
+
+	Smaller circles correspont to smaller values of \( f\left( x,y \right) \), but we must also satisfy \( g\left( x,y \right)=0 \). In the best case, \( f\left( x,y \right) = c \) is just touching \( g\left( x,y \right)=0 \). If this is worked out geometrically, we get \( \left( 1,1 \right) \text{ and } \left( -1,-1 \right) \).
+\end{eg}
+\bigskip
+
+This idea is used in Lagranges method. We want \( f\left( x,y \right)=c \) to be parallell to \( g\left( x,y \right)=0 \)
+
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig5.pdf_tex}
+\end{figure}
+\end{document}
