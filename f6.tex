@@ -32,12 +32,79 @@ This method isn't always feasible, so lets look at some alternatives.
 \end{eg}
 \bigskip
 
-This idea is used in Lagranges method. We want \( f\left( x,y \right)=c \) to be parallell to \( g\left( x,y \right)=0 \)
-
+This idea is used in Lagranges method. We want \( f\left( x,y \right)=c \) to be parallell to \( g\left( x,y \right)=0 \). More precisesly: Their vectors should be parallell.
 
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{1\textwidth}
 	\import{./figures/}{fig5.pdf_tex}
 \end{figure}
+
+Equivalently, their normal vectors are also paralell. Recall that a normal vector to \( g=0 \) is given by \( \nabla f \). Similarly, \( \nabla f \) is normal to \( f=c \).
+
+
+\subsection{Method for Langrange}
+Suppose we want to find a local maxima and minima of \( f\left( x,y \right) \) with constraint \( g\left( x,y \right)=0 \). We proceed as follows
+
+\begin{enumerate}
+	\item Find all possible solutions to the equations
+
+	      \[ \nabla f\left( x,y \right)= \lambda\nabla g\left( x,y \right), \quad g\left( x,y \right)=0 \]
+
+	\item Plug in all solutions from 1. into \( f\left( x,y \right) \) and identify the largest and smallest.
+
+	      \begin{itemize}
+		      \item The number \( \lambda \) is called the \textit{Lagrange Multiplier}.
+		      \item Easy extension to \( n \) variables.
+		      \item Can also be generalized to multiple constraints, \( g_{1}, \ldots , g_{n} \)
+	      \end{itemize}
+\end{enumerate}
+
+\begin{eg}
+	We have the following functions
+
+	\[ f\left( x,y \right)=x^2+y^2, \quad g\left( x,y \right) = xy-1 = 0 \]
+
+	We compute the gradients
+
+	\[ \nabla f\left( x,y \right)=\left( 2x,2y \right), \quad \nabla g\left( x,y \right)=\left( x,y \right) \]
+
+	The Lagrange equiations are
+
+	\[ 2x=\lambda y, \quad 2y = \lambda x ,\quad xy-1 = 0 \]
+
+	Observe that \( \left( x,y,\lambda \right) = \left( 0,0,0 \right) \) is not a solution. For \( x \neq 0 \), we get \( y = \frac{1}{x}  \), from the third equation.
+
+	\begin{align*}
+		 & 2x = \lambda y \Rightarrow 2x = \lambda \frac{1}{x} \Rightarrow \lambda = 2x^2 \\
+		 & 2y = \lambda x \Rightarrow \frac{2}{x} = 2xs^2 \cdot x \Rightarrow x^{4} = 1   \\
+		 & x^{4} = 1 \Rightarrow x \pm 1, \quad y = \frac{1}{x}
+	\end{align*}
+
+	\[ \left( x,y \right) = \left( 1,1 \right) \quad\wedge\quad \left( x,y \right)  = \left( -1,-1 \right)\]
+
+	Are theses points the minima? We have
+
+	\[ f\left( 1,1 \right) = f\left( -1,-1 \right) = 2 \]
+
+	Lets Compare this to some other points, such that \( g\left( x,y \right) = 0 \). For instance, \( \left( x,y \right) = \left( 2,\frac{1}{2}  \right) \)
+
+	\[ g\left( 2, \frac{1}{2}  \right) = 2 \cdot \frac{1}{2} -1 = 0 \]
+
+	\[ f\left( 2, \frac{1}{2}  \right) = 2^2 + \left( \frac{1}{2}  \right)^2 > 2 \]
+
+	This tells us that \( \left( x,y \right) = \left( \pm1, \pm1 \right) \) are local minima.
+\end{eg}
+
+\begin{eg}
+	Consider a box of surface area \( 24 \text{ cm}^2 \).
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig7.pdf_tex}
+	\end{figure}
+\end{eg}
+
+
 \end{document}
