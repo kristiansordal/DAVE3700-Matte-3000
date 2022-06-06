@@ -96,6 +96,7 @@ Suppose we want to find a local maxima and minima of \( f\left( x,y \right) \) w
 	This tells us that \( \left( x,y \right) = \left( \pm1, \pm1 \right) \) are local minima.
 \end{eg}
 
+\medskip
 \begin{eg}
 	Consider a box of surface area \( 24 \text{ cm}^2 \).
 
@@ -104,7 +105,44 @@ Suppose we want to find a local maxima and minima of \( f\left( x,y \right) \) w
 		\def\svgwidth{1\textwidth}
 		\import{./figures/}{fig7.pdf_tex}
 	\end{figure}
+
+	Determine the dimensions \( \left( x,y,z \right) \) such that the volume is max.
+	\medskip
+
+	We have the surface area \( 2xy+2xz+2yz \). Our constraint is
+
+	\[ g\left( x,y,z \right) =2xy+2xz+2yz - 24 = 0 \]
+
+	The goal is to maximize \( f\left( x,y,z \right) = 0 \), with the consstraint \( g\left( x,y,z \right) = 0 \).
+	\medskip
+
+	The equation \( \nabla f = \lambda\nabla g \) gives
+
+	\[ yz = 2\lambda\left( y+2 \right),\quad xz = 2\lambda\left( x+2 \right), \quad xy = 2\lambda\left( x+y \right) \]
+
+	Obsereve that \( \lambda \neq \), since \( x,y,z > 0 \). To solve the equations, we can multiply by \( x,y \text{ and } z \), respectively, then we get
+
+	\[ x\left( y+z \right) = y\left( x+z \right) = x\left( y+x \right) \]
+
+	Consider \( x\left( y+z \right) = y\left( x+z \right) \).
+
+	\[ x\left( y+z \right) = y\left( x+z \right) \Rightarrow \left( x-y \right)z = 0 \]
+
+	\[ z \neq 0,\quad x = y \]
+
+	Its the same for the other equations, so \( x = y = z \). We also need to use \( g=0 \). Setting \( x=y=z \)j, we get
+
+	\begin{align*}
+		g\left( x,x,x \right) & = 2x^2+2x^2+2x^2 - 24 = 0 \\
+		x^2                   & =4                        \\
+		x                     & = 2
+	\end{align*}
+
+	Lagranges method gives:
+
+	\[ \left( x,y,z \right) = \left( 2,2,2 \right) \Rightarrow V = 8 \]
 \end{eg}
+
 
 
 \end{document}

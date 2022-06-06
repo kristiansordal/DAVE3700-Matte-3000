@@ -1,0 +1,184 @@
+\documentclass{article}
+\input{preamble.tex}
+
+\begin{document}
+\section{Lecture 7}
+
+\subsection{Parametrized Curve}
+
+A curve is described as a sset of points in \( \R^2 \text{ and } \R^3 \). For instance a line is described by
+
+\[ f = \left\{ \left( x,y \right) \in \R^2:x=y \right\} \]
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig8.pdf_tex}
+\end{figure}
+
+This is a static picture. But how do we give a dynamical picture? We'll use parametrized curves.
+
+\begin{definition}
+	A parametrization of a curve \( c \) in \( \R^2 \), is given by
+
+	\[ \vec{r}\left( t \right) = \left( x\left( t \right), y\left( t \right) \right), \quad t_{0} \leq t \leq t_{1}  \]
+
+	Such that \( \vec{r}\left( t \right) \in c \) for all time \( t \).
+\end{definition}
+
+\begin{itemize}
+	\item A parametrization describes motion. Think of \( t \) as the time.
+	\item A parametrization is not unique.
+	\item Various natural assumptions, such as continuity and differentiability.
+\end{itemize}
+\medskip
+
+\begin{eg}
+	Consider the funtion \( \vec{r}\left( t \right) \) with \( 0 \leq t \leq 1 \).
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{0.55\textwidth}
+		\import{./figures/}{fig9.pdf_tex}
+	\end{figure}
+
+	\[ \vec{r}\left( 0 \right) = \left( 0,0 \right),\quad \vec{r}\left( 1 \right)=\left( 1,1 \right) \]
+
+	We have the portion of the line where \( y=x \). Notce that here, \( x\left( t \right)=t \), \( y\left( t \right)=t \) and \( y\left( t \right)=x\left( t \right)=t \) for all \( t \).
+
+	Lets consider a different function,
+
+	\[ \vec{r}\left( t \right)=\left( 2t,2t \right), \quad 0 \leq t \leq \frac{1}{2}  \]
+
+	When we parametrize, we get
+
+	\[ \vec{r}\left( 0 \right) = \left( 0,0 \right), \quad \vec{r}\left( \frac{1}{2}  \right) = \left( 1,1 \right) \]
+
+	We are moving along the curve at twice the speed.
+\end{eg}
+\medskip
+
+\begin{eg}
+	Given \( f(x) \), we consider
+
+	\[ \vec{r}\left( t \right) = \left( t, f\left( t \right) \right),\quad t_{0} \leq t \leq t_{1}  \]
+
+	This describes a portion of the graph \( f \), with
+
+	\[ \text{Start: } \left( t_{0} ,f\left( t_{0}  \right) \right),\quad \text{End: } \left( t_{1}, f\left( t_{1}  \right) \right) \]
+
+	For instance, consider the line \( y = mx + c \), we have
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig10.pdf_tex}
+	\end{figure}
+
+	We have that
+
+	\[ \vec{r}\left( t \right) = \left( t, mt + c \right), \quad t_{0} \leq t \leq t_{1}  \]
+
+\end{eg}
+\medskip
+
+\begin{eg}
+	We want to describe a line with
+
+	\[ \text{Start: } A = \left( x_{0} ,y_{0}  \right), \quad \text{End: } B = \left( x_{1} , y_{1}  \right) \]
+
+	Then we take the parametrization
+
+	\[ \vec{r}\left( t \right) = \left( 1-t \right)A + tB, \quad 0 \leq t \leq 1 \]
+
+	More explicitly, we have
+
+	\[ \vec{r}\left( t \right) = \left( \left( 1-t \right)x_{0} + tx, \left( 1-t \right)y_{0} + ty \right) \]
+
+	Note that \( \vec{r}\left( 0 \right) = A \text{ and } \vec{r}\left( 1 \right)=B\).
+\end{eg}
+\medskip
+
+\begin{eg}
+	Consider \( \vec{r}\left( t \right) = \left( \cos t, \sin t \right), 0 \leq t \leq 2\pi \). What curve does this describe?
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig11.pdf_tex}
+	\end{figure}
+
+	It describes a circle.
+
+	\[ x\left( t \right)^2 + y\left( t \right)^2 = \left( \cos\left( t \right)^2+\sin\left( t \right)^2 \right)=1 \]
+
+	We start at \( \left( 1,0 \right)  \) and move counter-clockwise.
+\end{eg}
+\medskip
+
+\begin{eg}
+	Here is an example from physics. Consider
+
+	\[ x\left( t \right)=v_{x}t, \quad y\left( t \right) = v_{y}t-\frac{1}{2} gt^2, \quad 0 \leq t \leq \frac{2v_{y}}{g}  \]
+
+	This describes the motion of an object with initial velocity \( \vec{v} = \left( v_{x}, v_{y} \right) \), under gravity. We write \( t_{0} = 0 \) and \( t_{1} = \frac{2v_{y}}{g} \). Note that
+
+	\[ \vec{r}\left( t_{0}  \right)= \left( 0,0 \right), \quad \vec{r}\left( t_{1}  \right) = \left( \frac{2v_{x}v_{y}}{g}, 0 \right) \]
+
+	The object falls back to the ground at time \( t_{1}  \).
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig12.pdf_tex}
+	\end{figure}
+
+	Well known fact: This motion is parabolic, we will rederive this.
+	\medskip
+
+	From \( x\left( t \right) = v_{x}t \), we get \( t = \frac{x\left( t \right)}{v_{x}} \). Then
+
+	\[ y\left( t \right) = v_{y}t-\frac{1}{2} gt^2 \Rightarrow \frac{v_{x}}{v_{y}}x\left( t \right) - \frac{1}{2} \frac{g}{v_{x}^2}   x\left( t \right)^2\]
+
+	This is the expression of a parabola
+
+	\[ y = ax^2 + bx +c,\quad a \neq 0 \]
+
+	It can also be written as
+
+	\[ y\left( t \right) = -\frac{1}{2} \frac{g}{v_{x}^2} \left( x\left( t \right) - \frac{v_{y}}{g} \right)^2 + \frac{1}{2} \frac{v_{y}}{g} \frac{v_{y}}{v_{x}} \]
+\end{eg}
+\medskip
+
+\subsection{Kinematics}
+Kinematics describes position, velocity and acceleration of an object.
+
+\begin{definition}
+	The position vector is \( \vec{r}\left( t \right) \). The velocity vector is \( \vec{v}\left( t \right)\frac{d \vec{r}}{dt} \). The acceleration vector is \( \vec{a}\left( t \right) = \frac{d^2\vec{r} }{dt^2} \).
+\end{definition}
+
+If we write \( \vec{r}\left( t \right)=\left( x\left( t \right),y\left( t \right) \right) \), then
+
+\[ \vec{v}\left( t \right) = \left( \frac{d x}{dt}, \frac{d y}{dt} \right) = \left( x'\left( t \right), y\left( t \right) \right) \]
+
+Similarily
+
+\[ \vec{a}\left( t \right) = \left( \frac{d ^2 x}{dt^2}, \frac{d ^2 y}{dt^2} \right) = \left( x''\left( t \right), y''\left( t \right) \right) \]
+
+\begin{eg}
+	Consider again the gravity example. Here we have
+
+	\[ \vec{r}\left( t \right) = \left( v_{x}t, v_{y}t-\frac{1}{2} gt^2 \right)\]
+
+	The velocity is
+
+	\[ \vec{v}\left( t \right)=\left( v_{x}, v_{y}-gt \right) \]
+
+	Note that \( v\left( 0 \right)=\left( v_{x}, v_{y} \right) \) is the initial velocity of the object. For acceleration, we get
+
+	\[ \vec{a}\left( t \right) = \frac{d \vec{v}}{dt} = \left( 0,-g \right) \]
+\end{eg}
+
+
+
+\end{document}

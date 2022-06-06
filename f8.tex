@@ -1,0 +1,87 @@
+\documentclass{article}
+\input{preamble.tex}
+
+\begin{document}
+\section{Lecture 8}
+\subsection{Determining Motion}
+
+Given acceleration \( \vec{a}\left( t \right) \), can we find \( \vec{v}\left( t \right) \text{ and } \vec{s}\left( t \right) \)? Yes, with some initial conditions given, we can. This is done by integration, consider
+
+\[ \vec{v}\left( t \right) = \frac{d \vec{s}}{dt} \]
+
+This is a differential equation for \( \vec{s}\left( t \right) \). To solve it, we integrate both sides in \( t \), from \( t_{1}  \), to \( t_{2}  \). We get
+
+\[ \int_{t_{0} }^{t_{1} } \vec{v}\left( t \right) dt = \int_{t_{0} }^{t_{1} } \frac{d \vec{s}}{dt} dt \]
+
+The fundamental theorem of calculus gives
+
+\[ \vec{s}\left( t_{1}  \right)-\vec{s}\left( t_{0}  \right) = \int_{t_{0} }^{t_{1} } \vec{v}\left( t \right) dt \]
+
+We can determine \( \vec{s}\left( t \right) \) for any \( t \) if we know \( \vec{v}\left( t \right) \) and the initial condition \( \vec{s}\left( t_{0}  \right) \).
+
+\begin{eg}
+	Consider an object with acceleration
+
+	\[ \vec{a}\left( t \right)=\left( 1,t \right)=\vec{i}-j\vec{j} \]
+
+	We have the following initial conditions
+
+	\[ \vec{s}\left( 0 \right)=\left( 2,0 \right)=2\vec{i} \quad\wedge\quad \vec{v}\left( 0 \right)=0 \]
+
+	We want to determine \( \vec{s}\left( t \right) \). First, to determine \( \vec{v}\left( t \right) \), we compute
+
+	\begin{align*}
+		\int_{0}^{t} \vec{a}\left( t \right) dt & = \vec{i}\int_{0}^{t} 1 dt + \vec{j}\int_{0}^{t} t dt \\
+		                                        & = t \vec{i} + \frac{1}{2} t^2 \vec{j}
+	\end{align*}
+
+	Here \( t_{0} = 0 \), since \( \vec{v}\left( 0 \right) = 0 \), then
+
+	\[ \vec{v}\left( t \right)=\vec{v}_{0} + \int_{0}^{t} \vec{a}\left( t \right) dt = t \vec{i} + \frac{1}{2} t^2 \vec{j} \]
+
+	To determine \( \vec{s} \), we compute
+
+	\begin{align*}
+		\int_{0}^{t} \vec{v}\left( t \right) dt & = \vec{i}\int_{0}^{t} t dt + \vec{j}\int_{0}^{t} \frac{1}{2} t^2 dt \\
+		                                        & = \frac{1}{2} t^2 \vec{i} + \frac{1}{6} t^3 \vec{j}
+	\end{align*}
+
+	Since \( \vec{s}\left( 0 \right) = \left( 2,0 \right) = 2 \vec{i} \), we get
+
+	\[ \vec{s}\left( t \right)=\vec{s}\left( 0 \right) + \int_{0}^{t} \vec{v}\left( t \right) dt = \left( \frac{t^2}{2} + 2  \right)\vec{i} + \frac{1}{6} t^3 \vec{j} \]
+\end{eg}
+\medskip
+
+\subsection{Arc Length}
+A formula that we can concretely use to compute the length of a curve (using a parametrization). Consider a curve \( c \), with parametrization
+
+\[ \vec{s}\left( t \right)=\left( x\left( t \right),y\left( t \right) \right) ,\quad t_{0} \leq t \leq t_{1} \]
+
+\begin{definition}
+	The arc length of \( c \) is given by
+
+	\[ S = \int_{t_{0} }^{t_{1} } \sqrt{\left( \frac{d x}{dt} \right)^2 + \left( \frac{d y}{dt} \right)^2} dt \]
+\end{definition}
+
+Idea: summing segments of length
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig16.pdf_tex}
+\end{figure}
+
+To compute \( S \), we need a parametrization of \( c \). Does \( S \) depent on this choice? No!
+
+\begin{eg}
+	Consider the line segment below
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig17.pdf_tex}
+	\end{figure}
+
+	From elementary geometry, its length is \( \sqrt{1^2+1^2} = \sqrt{2} \)
+\end{eg}
+\end{document}

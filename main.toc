@@ -7,8 +7,19 @@
 \contentsline {subsection}{\numberline {2.2}Higher order derivatives}{4}{}%
 \contentsline {subsection}{\numberline {2.3}Chain Rule}{4}{}%
 \contentsline {subsection}{\numberline {2.4}The Gradient}{5}{}%
-\contentsline {section}{\numberline {3}Line Integrals, Parametrization and Vector Fields}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Identities between operations}{5}{}%
-\contentsline {subsection}{\numberline {3.2}Line Integrals}{5}{}%
-\contentsline {subsection}{\numberline {3.3}Parametrization and orientation}{6}{}%
-\contentsline {subsection}{\numberline {3.4}Case of Vector Fields}{7}{}%
+\contentsline {section}{\numberline {3}Lecture 4}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Directional Derivatives}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Critical Points}{6}{}%
+\contentsline {section}{\numberline {4}Lecutre 5}{6}{}%
+\contentsline {subsection}{\numberline {4.1}Hessian Matrix}{6}{}%
+\contentsline {subsection}{\numberline {4.2}Global extremal values}{7}{}%
+\contentsline {subsection}{\numberline {4.3}Constrained optimization}{9}{}%
+\contentsline {section}{\numberline {5}Lecture 6}{9}{}%
+\contentsline {subsection}{\numberline {5.1}Substitution Method}{9}{}%
+\contentsline {subsection}{\numberline {5.2}Lagrange's Method}{10}{}%
+\contentsline {subsection}{\numberline {5.3}Method for Langrange}{11}{}%
+\contentsline {section}{\numberline {6}Line Integrals, Parametrization and Vector Fields}{13}{}%
+\contentsline {subsection}{\numberline {6.1}Identities between operations}{13}{}%
+\contentsline {subsection}{\numberline {6.2}Line Integrals}{13}{}%
+\contentsline {subsection}{\numberline {6.3}Parametrization and orientation}{14}{}%
+\contentsline {subsection}{\numberline {6.4}Case of Vector Fields}{15}{}%

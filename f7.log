@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.30)  6 JUN 2022 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.30)  6 JUN 2022 19:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**f6.tex
-(./f6.tex
+**f7.tex
+(./f7.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -790,23 +790,23 @@ File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
 \AM@templatesizebox=\box133
 ) (/usr/share/texlive/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
-)) (./f6.aux)
-\openout1 = `f6.aux'.
+)) (./f7.aux)
+\openout1 = `f7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -870,51 +870,71 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 9.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (./figures/fig4.pdf_tex
-<./figures//fig4.pdf, id=4, page=1, 682.86612pt x 341.43306pt>
-File: ./figures//fig4.pdf Graphic file (type pdf)
-<use ./figures//fig4.pdf, page 1>
-Package pdftex.def Info: ./figures//fig4.pdf , page1 used on input line 56.
+) (./figures/fig8.pdf_tex
+<./figures//fig8.pdf, id=4, page=1, 682.86612pt x 341.43306pt>
+File: ./figures//fig8.pdf Graphic file (type pdf)
+<use ./figures//fig8.pdf, page 1>
+Package pdftex.def Info: ./figures//fig8.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 440.84746pt x 220.4284pt.
-) (./figures/fig5.pdf_tex
-<./figures//fig5.pdf, id=5, page=1, 682.86612pt x 341.43306pt>
-File: ./figures//fig5.pdf Graphic file (type pdf)
-<use ./figures//fig5.pdf, page 1>
-Package pdftex.def Info: ./figures//fig5.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 440.84746pt x 220.4284pt.
+)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 21.
+ (./figures/fig9.pdf_tex
+<./figures//fig9.pdf, id=5, page=1, 682.86612pt x 341.43306pt>
+File: ./figures//fig9.pdf Graphic file (type pdf)
+<use ./figures//fig9.pdf, page 1>
+Package pdftex.def Info: ./figures//fig9.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 242.46744pt x 121.23302pt.
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures//fig4.pdf>] [2 <./figures//fig5.pdf>] (./figures/fig7.pdf_tex
-<./figures//fig7.pdf, id=29, page=1, 682.86612pt x 341.43306pt>
-File: ./figures//fig7.pdf Graphic file (type pdf)
-<use ./figures//fig7.pdf, page 1>
-Package pdftex.def Info: ./figures//fig7.pdf , page1 used on input line 56.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures//fig8.pdf> <./figures//fig9.pdf>] (./figures/fig10.pdf_tex
+<./figures//fig10.pdf, id=23, page=1, 682.86612pt x 341.43306pt>
+File: ./figures//fig10.pdf Graphic file (type pdf)
+<use ./figures//fig10.pdf, page 1>
+Package pdftex.def Info: ./figures//fig10.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 440.84746pt x 220.4284pt.
-) [3 <./figures//fig7.pdf>] [4] (./f6.aux) ) 
+) [2 <./figures//fig10.pdf>] (./figures/fig11.pdf_tex
+<./figures//fig11.pdf, id=29, page=1, 682.86612pt x 341.43306pt>
+File: ./figures//fig11.pdf Graphic file (type pdf)
+<use ./figures//fig11.pdf, page 1>
+Package pdftex.def Info: ./figures//fig11.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 440.84746pt x 220.4284pt.
+) (./figures/fig12.pdf_tex
+<./figures//fig12.pdf, id=30, page=1, 682.86612pt x 341.43306pt>
+File: ./figures//fig12.pdf Graphic file (type pdf)
+<use ./figures//fig12.pdf, page 1>
+Package pdftex.def Info: ./figures//fig12.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 440.84746pt x 220.4284pt.
+) [3 <./figures//fig11.pdf>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 156.
+ [4 <./figures//fig12.pdf>] [5] (./f7.aux) ) 
 Here is how much of TeX's memory you used:
- 23544 strings out of 478287
- 478886 string characters out of 5849289
- 748715 words of memory out of 5000000
- 41234 multiletter control sequences out of 15000+600000
- 476101 words of font info for 54 fonts, out of 8000000 for 9000
+ 23561 strings out of 478287
+ 479424 string characters out of 5849289
+ 750707 words of memory out of 5000000
+ 41246 multiletter control sequences out of 15000+600000
+ 475755 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,16n,134p,503b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on f6.pdf (4 pages, 125703 bytes).
+ 100i,15n,134p,503b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on f7.pdf (5 pages, 140671 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
