@@ -1280,6 +1280,17 @@ INPUT ./figures//fig17.pdf
 INPUT ./figures//fig17.pdf
 INPUT ./figures//fig17.pdf
 INPUT ./figures//fig17.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT ./figures/fig18.pdf_tex
+INPUT ./figures/fig18.pdf_tex
+INPUT ./figures/fig18.pdf_tex
+INPUT ./figures/fig18.pdf_tex
+INPUT ./figures/fig18.pdf_tex
+INPUT ./figures//fig18.pdf
+INPUT ./figures//fig18.pdf
+INPUT ./figures//fig18.pdf
+INPUT ./figures//fig18.pdf
+INPUT ./figures//fig18.pdf
 INPUT f8.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -1290,3 +1301,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb

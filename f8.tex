@@ -19,6 +19,7 @@ The fundamental theorem of calculus gives
 
 We can determine \( \vec{s}\left( t \right) \) for any \( t \) if we know \( \vec{v}\left( t \right) \) and the initial condition \( \vec{s}\left( t_{0}  \right) \).
 
+\medskip
 \begin{eg}
 	Consider an object with acceleration
 
@@ -67,21 +68,95 @@ Idea: summing segments of length
 
 \begin{figure}[H]
 	\centering
-	\def\svgwidth{1\textwidth}
+	\def\svgwidth{0.8\textwidth}
 	\import{./figures/}{fig16.pdf_tex}
 \end{figure}
 
 To compute \( S \), we need a parametrization of \( c \). Does \( S \) depent on this choice? No!
+\medskip
 
 \begin{eg}
 	Consider the line segment below
 
 	\begin{figure}[H]
 		\centering
-		\def\svgwidth{1\textwidth}
+		\def\svgwidth{0.8\textwidth}
 		\import{./figures/}{fig17.pdf_tex}
 	\end{figure}
 
-	From elementary geometry, its length is \( \sqrt{1^2+1^2} = \sqrt{2} \)
+	From elementary geometry, its length is \( \sqrt{1^2+1^2} = \sqrt{2} \). Consider the parametrization
+
+	\[ \vec{s}\left( t \right)\left( t,t \right), \quad 0 \leq t \leq 1 \]
+
+	We have \( \left( x'\left( t \right), y'\left( t \right) \right) = \left( 1,1 \right) \). Then
+
+	\[ S=\int_{0}^{1} \sqrt{1^2+1^2} dt = \sqrt{2}\int_{0}^{1} 1 dt = \sqrt{2}\]
+
+	Instead we choose
+
+	\[ \vec{s}\left( t \right)=\left( 2t,2t \right),\quad 0 \leq t \leq \frac{1}{2}  \]
+
+	We have \( \left( x'\left( t \right),y'\left( t \right) \right) = \left( 2,2 \right) \). Then
+
+	\[ S = \int_{0}^{\frac{1}{2} } \sqrt{2^2+2^2} dt = \sqrt{8}\int_{0}^{\frac{1}{2} } 1 dt = \sqrt{8}\cdot \frac{1}{2} =\sqrt{2} \]
 \end{eg}
+\medskip
+
+\textbf{Question:} What is the distance crossed up to time \( t \)?
+
+\begin{definition}
+	The arc length parameter is
+
+	\[ S\left( t \right)=\int_{t_{0} }^{t_{1} } \sqrt{\left( \frac{d x}{dt} \right)^2 + \left( \frac{d y}{dt} \right)^2} dt \]
+\end{definition}
+
+The difference is that we integrate up to \( t \), not \( t_{1}  \). Special case when \( S\left( t_{1}  \right) = S \). There is an important relation between \( S\left( t \right) \text{ and } \vec{v}\left( t \right) \).
+
+\begin{prop}
+	We have
+
+	\[ \left| \vec{v}\left( t \right) \right| = \frac{d S}{dt} \]
+\end{prop}
+
+\begin{proof}
+	The fundamental theorem of calculus states that if
+
+	\[ F(x)=\int_{a}^{x} f(x) dt \rightarrow F'\left( x \right) = f(x) \]
+
+	Applying this to \( S\left( t \right) \), then
+
+	\[ S'\left( t \right)=\frac{d s}{dt}=\sqrt{\left( \frac{d x}{dt} \right)^2+\left( \frac{d y}{dt} \right)^2} \]
+
+	On the other hand, we have that
+	\[ \vec{v}\left( t \right)=\left( x'\left( t \right),y'\left( t \right) \right) \quad\wedge\quad \left| \vec{v} \left( t \right)\right| = \left( t \right)=\sqrt{x'\left( t \right)^2 + y'\left( t \right)^2}  \]
+
+	The two expressions coincide.
+\end{proof}
+
+\newpage
+\begin{eg}
+	Consider a circle of radius R, with
+
+	\[ \vec{S}\left( t \right)=\left( R \cos t, R \sin t \right), \quad 0 \leq t \leq 2\pi \]
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig18.pdf_tex}
+	\end{figure}
+
+	We want to compute \( S\left( t \right) \), we have
+
+	\[ \sqrt{x'\left( t \right)^2 + y'\left( t \right)^2} = \sqrt{R^2\left( \sin t \right)^2 + R^2\left( \cos t  \right)^2}= R \]
+
+	We want to check that \( \frac{d S}{dt}=\left| \vec{v}\left( t \right) \right| \). We have
+
+	\[ \vec{v}\left( t \right) = \frac{d \vec{S}}{dt}  = \left( -R \sin t, R \cos t \right)\]
+
+	Its length is equal to \( \left| \vec{v}\left( t \right) \right| = R \). Since \( S\left( t \right) = R\left( t \right) \), we see that
+
+	\[ \frac{d S}{dt} = \left| \vec{v}\left( t \right) \right| \]
+\end{eg}
+\medskip
+
 \end{document}
