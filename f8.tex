@@ -159,4 +159,63 @@ The difference is that we integrate up to \( t \), not \( t_{1}  \). Special cas
 \end{eg}
 \medskip
 
+\subsection{Tangent Vectors}
+Geometrically,, the velocity \( \vec{v}\left( t \right) \) is tanget to a curve. It is useful to define a tangent vector of length 1.
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig20.pdf_tex}
+\end{figure}
+
+\begin{definition}
+	The unit tangent vector is
+
+	\[ \vec{T}\left( t \right) = \frac{\vec{v}\left( t \right)}{\left| \vec{v}\left( t \right) \right|} \]
+\end{definition}
+
+Note that \( \vec{T} \) has length 1 since
+
+\[ \vec{T}\left( t \right) \cdot  \vec{T}\left( t \right)  = \frac{\vec{v}\left( t \right)\cdot \vec{v}\left( t \right)}{\left| \vec{v}\left( t \right) \right|^2} = 1\]
+
+\subsection{Normal Vectors}
+Normal vectors are normal to the curve, or in other words, they are orthogonal. Recall that for implicit curves \( f\left( x,y \right) = 0 \), a normal vector is given by \( \nabla f \).
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{0.85\textwidth}
+	\import{./figures/}{fig19.pdf_tex}
+\end{figure}
+
+Lets now consider parametrizised curves. We have
+
+\[ S\left( t \right) = \left( x\left( t \right), y\left( t \right) \right), \quad t_{0} \leq t \leq t_{1}  \]
+
+\begin{definition}
+	A unit normal vector to the curve is defined by
+
+	\[ \vec{N}\left( t \right) = \frac{\frac{d \vec{T}}{dt}}{\left| \frac{d \vec{T}}{dt} \right|} \]
+\end{definition}
+
+We need to check that \( \vec{N} \) is orthogonal to \( \vec{T} \), that is: \( \vec{N}\left( t \right)\cdot \vec{T}\left( t \right) = 0 \) for all \( t \).
+
+\begin{prop}
+	We have that
+
+	\[ \vec{N}\left( t \right)\cdot \vec{T}\left( t \right) = 0 \]
+\end{prop}
+
+\begin{proof}
+	Since \( \vec{T} \) is a unit vector, we have that, for all \( t \)
+
+	\[ \vec{T}\left( t \right)\cdot \vec{T}\left( t \right) = 1 \]
+
+	Take the time derivative, the \( \left( \vec{T}\cdot \vec{T} \right) = 0 \). We also have
+
+	\[ \frac{d }{dt}\left( \vec{T}\cdot \vec{T} \right) = \frac{d \vec{T}}{dt} \cdot  \vec{T} + \vec{T}\frac{d \vec{T}}{dt} = 2 \frac{d \vec{T}}{dt}\cdot \vec{T}\]
+
+	Since \( \left( \vec{T}\cdot \vec{T} \right) = 0 \), we get \( \frac{d \vec{T}}{dt}\cdot \vec{T} = 0 \). Dividing by \( \left| \frac{d \vec{T}}{dt} \right| \), we get \( \vec{N}\left( t \right)\cdot \vec{T}\left( t \right) = 0 \)
+\end{proof}
+
+
 \end{document}

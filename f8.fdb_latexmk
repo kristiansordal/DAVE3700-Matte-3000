@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1654802259 "f8.tex" "f8.pdf" "f8" 1654802259
+["pdflatex"] 1654888872 "f8.tex" "f8.pdf" "f8" 1654888873
   "/etc/texmf/web2c/texmf.cnf" 1653853381 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -202,15 +202,19 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1653925336 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1653925380 2802407 a265ffc69db6c6b9fcbd2df47e7910bc ""
-  "f8.aux" 1654802259 454 fabb8a551a5cd0226361e6633f41c3cf "pdflatex"
-  "f8.tex" 1654802257 5946 2e6f7e9933e5f83a9523430dd61d1ed4 ""
+  "f8.aux" 1654888872 669 7f2fd1ef0472a2a3dae1a21c9449cafe "pdflatex"
+  "f8.tex" 1654888870 8185 9a32bbd92ade17dec70f6445663ac224 ""
   "figures//fig16.pdf" 1654541934 1718 131bdf48a61263e1a3b234426d5d552b ""
   "figures//fig17.pdf" 1654542144 1499 e27bb41087e4c009872f731c07cca0be ""
   "figures//fig18.pdf" 1654802074 1397 53a3fd041af6998892ac0ed8a173ec34 ""
+  "figures//fig19.pdf" 1654888259 1419 684f1e65892915a8d34c799121288eec ""
+  "figures//fig20.pdf" 1654888557 1499 7020b8c97313eb6e708bab21300f3568 ""
   "figures/fig16.pdf_tex" 1654541934 2252 79c096c53ffd49312c1597c864a06b13 ""
   "figures/fig17.pdf_tex" 1654542144 2360 25eeeeff83d72a263653a87338b3c722 ""
   "figures/fig18.pdf_tex" 1654802074 2059 748ba9292387c7d6357a390510cb0ee8 ""
-  "preamble.tex" 1654527371 5076 e27a669c4e6cef6c8f1de9439f629c6c ""
+  "figures/fig19.pdf_tex" 1654888259 2371 0f6f188e6c4151da0d5b7d0f52a5fa1c ""
+  "figures/fig20.pdf_tex" 1654888557 2371 322282a76eac6c447c98891a8eaf83bd ""
+  "preamble.tex" 1654887874 5125 6a1fc790b3d263fa94bbe376dc4d8a99 ""
   (generated)
   "f8.aux"
   "f8.log"
