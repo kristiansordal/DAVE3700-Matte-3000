@@ -4,7 +4,7 @@
 \section{Lecture 6}
 \subsection{Substitution Method}
 We want to maximize / minimize \( f\left( x,y \right) \) with constraint \( g\left( x,y \right)=0 \). We can solve \( g\left( x,y \right)=0 \) for one variable \( y=y\left( x \right) \).
-\medskip
+
 
 \begin{eg}
 	Consider \( f\left( x,y \right) = x^2 + y^2 \) and \( g\left( x,y \right) = xy-1 =0\). In this case, we have \( f=\frac{1}{x}  \) from \( g = 0 \), we get
@@ -30,7 +30,7 @@ This method isn't always feasible, so lets look at some alternatives.
 
 	Smaller circles correspont to smaller values of \( f\left( x,y \right) \), but we must also satisfy \( g\left( x,y \right)=0 \). In the best case, \( f\left( x,y \right) = c \) is just touching \( g\left( x,y \right)=0 \). If this is worked out geometrically, we get \( \left( 1,1 \right) \text{ and } \left( -1,-1 \right) \).
 \end{eg}
-\bigskip
+
 
 This idea is used in Lagranges method. We want \( f\left( x,y \right)=c \) to be parallell to \( g\left( x,y \right)=0 \). More precisesly: Their vectors should be parallell.
 
@@ -96,7 +96,7 @@ Suppose we want to find a local maxima and minima of \( f\left( x,y \right) \) w
 	This tells us that \( \left( x,y \right) = \left( \pm1, \pm1 \right) \) are local minima.
 \end{eg}
 
-\medskip
+
 \begin{eg}
 	Consider a box of surface area \( 24 \text{ cm}^2 \).
 
@@ -107,14 +107,14 @@ Suppose we want to find a local maxima and minima of \( f\left( x,y \right) \) w
 	\end{figure}
 
 	Determine the dimensions \( \left( x,y,z \right) \) such that the volume is max.
-	\medskip
+
 
 	We have the surface area \( 2xy+2xz+2yz \). Our constraint is
 
 	\[ g\left( x,y,z \right) =2xy+2xz+2yz - 24 = 0 \]
 
 	The goal is to maximize \( f\left( x,y,z \right) = 0 \), with the consstraint \( g\left( x,y,z \right) = 0 \).
-	\medskip
+
 
 	The equation \( \nabla f = \lambda\nabla g \) gives
 

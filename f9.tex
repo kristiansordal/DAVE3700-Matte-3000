@@ -16,7 +16,6 @@ Yesterday we saw that
 	\import{./figures/}{fig19.pdf_tex}
 \end{figure}
 
-asdfasdfasdfas
 \begin{eg}
 	Consider the circle
 
@@ -46,215 +45,92 @@ asdfasdfasdfas
 		\def\svgwidth{1\textwidth}
 		\import{./figures/}{fig21.pdf_tex}
 	\end{figure}
-
-	We revisit the implicit case \( f\left( x,y \right)= 0 \).
-
-	\begin{prop}
-
-	\end{prop}
-
-
-	\begin{proof}
-
-	\end{proof}
-
-
-
 \end{eg}
 
-\end{document}
-\documentclass{article}
-\input{preamble.tex}
+We revisit the implicit case \( f\left( x,y \right)= 0 \).
 
-\begin{document}
-\section{Lecture 9}
+\begin{prop}
+	Let \( C \) be defined by \( f\left( x,y \right)=0 \). A unit normal to \( C \) is given by \( \vec{n}= \frac{\nabla f}{\left| \nabla f \right|} \)
+\end{prop}
 
-\subsection{Normal Vectors - Continued}
 
-Yesterday we saw that
+\begin{proof}
+	Suppose \( C \) is parametrized by
 
-\[ \vec{N}\left( t \right) = \frac{\frac{d \vec{T}}{dt}}{\left| \frac{d \vec{T}}{dt} \right|} \]
+	\[ \vec{r}\left( t \right)=\left( x\left( t \right),y\left( t \right) \right) ,\quad t_{0} \leq t \leq t_{1}  \]
+
+	By definition of \( C \), we have
+
+	\[ f\left( \vec{r}\left( t \right) \right) =f\left( x\left( t \right) y\left( t \right) \right), t_{0} \leq t \leq t_{1} \]
+
+	We have that \( \frac{d }{dt}f\left( \vec{r}\left( t \right) \right) = 0 \), but using the chain rule, we get
+
+	\[ \frac{d f\left( \vec{r}\left( t \right) \right)}{dt} = \nabla f \left( \vec{r}\left(  t \right) \right) \cdot  \frac{d \vec{r}}{dt} \]
+
+	Hence, we get
+
+	\[ \nabla f \left( \vec{r}\left( t \right) \right) \cdot  \vec{v}\left( t \right) = 0 \]
+
+	Therefore \( \nabla f \left( \vec{r}\left( t \right) \right) \) is normal to the curve \( C \), or orthogonal to the tangent \( \vec{v}\left( t \right) \)
+\end{proof}
+
+\begin{eg}
+	The circle of radius 1 can be described implicitly by \( f\left( x,y \right)=0 \) with
+
+	\[ f\left( x,y \right)=x^2+y^2-1 \]
+
+	The gradient is \( \nabla f \left( x,y \right) = \left( 2x,2y \right) \), not of length 1, since
+
+	\[ \left| \nabla f\left( x,y \right) \right|=\sqrt{4x^2+4y^2}=2 \sqrt{x^2+y^2} \]
+
+	We are only interested in \( \left( x,y \right) \) such that \( f\left( x,y \right)=0 \), that is \( x^2+y^2=1 \), then
+
+	\[ \left| \nabla f \right| = 2 \]
+
+	Hence we get
+
+	\[ \vec{n} \frac{\nabla f}{\left| \nabla f \right|} = \frac{\left( 2x,2y \right)}{2} = \left( x,y \right) \]
+
+	The normal vectors point outside of the circle, note: \( \vec{n}=-\vec{N} \), compare with the parameter.
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig22.pdf_tex}
+	\end{figure}
+\end{eg}
+
+\subsection{Curvature}
+We want to compute how much a curve "curves".
 
 \begin{figure}[H]
 	\centering
-	\def\svgwidth{0.6\textwidth}
-	\import{./figures/}{fig19.pdf_tex}
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig15.pdf_tex}
 \end{figure}
 
-asdfasdfasdfas
+How do we quantify this?
+
+\begin{definition}
+	Let \( C \) be a parametrized curve, ant \( \vec{T} \) its unit tangent vector. The curvature is then defined by
+
+	\[ K = \left| \frac{d\vec{T}}{dS} \right| \]
+
+	Where \( S \) is the arc length parameter of \( C \). We also define the radius of curvature as
+
+	\[ \rho = \frac{1}{K}  \]
+\end{definition}
+
+Note: We consider \( S \), not \( t \). Reason: \( K \) does not depend on parametrization.
+
 \begin{eg}
-	Consider the circle
+	Consider the following
 
-	\[ \vec{r}\left( t \right) = \left( \cos t, \sin t \right), 0 \leq t \leq 2\pi \]
+	\[ \vec{r}\left( t \right)=\left( 0,0 \right), \quad 0 \leq t \leq 1 \]
 
-	The velocity is
+	We expect \( K \) to be zero. We can easily compute
 
-	\[ \vec{v}\left( t \right) = \vec{r}'  = \left( -\sin t , \cos t \right)\]
-
-	We have \( \left| \vec{v}\left( t \right) \right| = 1 \), since
-
-	\[ \vec{v}\left( t \right)\cdot \vec{v}\left( t \right) = \left( \sin t^2 = \cos t^2 \right) =1\]
-
-	We find that \( \vec{T}\left( t \right) = \vec{v}\left( t \right) \). To find \( \vec{N} \), we need first
-
-	\[ \frac{d \vec{T}}{dt} = \frac{d \vec{v}}{dt} = \left( -\cos t, - \sin t \right) \]
-
-	We check that \( \left| \frac{d \vec{T}}{dt} \right| = 1 \), then
-
-	\[ \vec{N}\left( t \right) = \left( -\cos t, - \sin t \right) = -\vec{r}\left( t \right) \]
-
-	We compute more explicitly:
-
-	\[ \vec{N}\left( t \right)\cdot \vec{T}\left( t \right) = \left( -\cos t, -\sin t \right) \cdot  \left( -\sin t, \cos t \right) = \cos t \cdot  \sin t - \sin t \cdot  \cos t = 0 \]
-	\begin{figure}[H]
-		\centering
-		\def\svgwidth{1\textwidth}
-		\import{./figures/}{fig21.pdf_tex}
-	\end{figure}
-
-	We revisit the implicit case \( f\left( x,y \right)= 0 \).
-
-	\begin{prop}
-
-	\end{prop}
-
-
-	\begin{proof}
-
-	\end{proof}
-
-
-
-\end{eg}
-
-\end{document}
-\documentclass{article}
-\input{preamble.tex}
-
-\begin{document}
-\section{Lecture 9}
-
-\subsection{Normal Vectors - Continued}
-
-Yesterday we saw that
-
-\[ \vec{N}\left( t \right) = \frac{\frac{d \vec{T}}{dt}}{\left| \frac{d \vec{T}}{dt} \right|} \]
-
-\begin{figure}[H]
-	\centering
-	\def\svgwidth{0.6\textwidth}
-	\import{./figures/}{fig19.pdf_tex}
-\end{figure}
-
-asdfasdfasdfas
-\begin{eg}
-	Consider the circle
-
-	\[ \vec{r}\left( t \right) = \left( \cos t, \sin t \right), 0 \leq t \leq 2\pi \]
-
-	The velocity is
-
-	\[ \vec{v}\left( t \right) = \vec{r}'  = \left( -\sin t , \cos t \right)\]
-
-	We have \( \left| \vec{v}\left( t \right) \right| = 1 \), since
-
-	\[ \vec{v}\left( t \right)\cdot \vec{v}\left( t \right) = \left( \sin t^2 = \cos t^2 \right) =1\]
-
-	We find that \( \vec{T}\left( t \right) = \vec{v}\left( t \right) \). To find \( \vec{N} \), we need first
-
-	\[ \frac{d \vec{T}}{dt} = \frac{d \vec{v}}{dt} = \left( -\cos t, - \sin t \right) \]
-
-	We check that \( \left| \frac{d \vec{T}}{dt} \right| = 1 \), then
-
-	\[ \vec{N}\left( t \right) = \left( -\cos t, - \sin t \right) = -\vec{r}\left( t \right) \]
-
-	We compute more explicitly:
-
-	\[ \vec{N}\left( t \right)\cdot \vec{T}\left( t \right) = \left( -\cos t, -\sin t \right) \cdot  \left( -\sin t, \cos t \right) = \cos t \cdot  \sin t - \sin t \cdot  \cos t = 0 \]
-	\begin{figure}[H]
-		\centering
-		\def\svgwidth{1\textwidth}
-		\import{./figures/}{fig21.pdf_tex}
-	\end{figure}
-
-	We revisit the implicit case \( f\left( x,y \right)= 0 \).
-
-	\begin{prop}
-
-	\end{prop}
-
-
-	\begin{proof}
-
-	\end{proof}
-
-
-
-\end{eg}
-
-\end{document}
-\documentclass{article}
-\input{preamble.tex}
-
-\begin{document}
-\section{Lecture 9}
-
-\subsection{Normal Vectors - Continued}
-
-Yesterday we saw that
-
-\[ \vec{N}\left( t \right) = \frac{\frac{d \vec{T}}{dt}}{\left| \frac{d \vec{T}}{dt} \right|} \]
-
-\begin{figure}[H]
-	\centering
-	\def\svgwidth{0.6\textwidth}
-	\import{./figures/}{fig19.pdf_tex}
-\end{figure}
-
-asdfasdfasdfas
-\begin{eg}
-	Consider the circle
-
-	\[ \vec{r}\left( t \right) = \left( \cos t, \sin t \right), 0 \leq t \leq 2\pi \]
-
-	The velocity is
-
-	\[ \vec{v}\left( t \right) = \vec{r}'  = \left( -\sin t , \cos t \right)\]
-
-	We have \( \left| \vec{v}\left( t \right) \right| = 1 \), since
-
-	\[ \vec{v}\left( t \right)\cdot \vec{v}\left( t \right) = \left( \sin t^2 = \cos t^2 \right) =1\]
-
-	We find that \( \vec{T}\left( t \right) = \vec{v}\left( t \right) \). To find \( \vec{N} \), we need first
-
-	\[ \frac{d \vec{T}}{dt} = \frac{d \vec{v}}{dt} = \left( -\cos t, - \sin t \right) \]
-
-	We check that \( \left| \frac{d \vec{T}}{dt} \right| = 1 \), then
-
-	\[ \vec{N}\left( t \right) = \left( -\cos t, - \sin t \right) = -\vec{r}\left( t \right) \]
-
-	We compute more explicitly:
-
-	\[ \vec{N}\left( t \right)\cdot \vec{T}\left( t \right) = \left( -\cos t, -\sin t \right) \cdot  \left( -\sin t, \cos t \right) = \cos t \cdot  \sin t - \sin t \cdot  \cos t = 0 \]
-	\begin{figure}[H]
-		\centering
-		\def\svgwidth{1\textwidth}
-		\import{./figures/}{fig21.pdf_tex}
-	\end{figure}
-
-	We revisit the implicit case \( f\left( x,y \right)= 0 \).
-
-	\begin{prop}
-
-	\end{prop}
-
-
-	\begin{proof}
-
-	\end{proof}
-
-
-
+	\[ S\left( t \right)=\int_{0}^{t} \sqrt{1^2-0^2} dt=t \]
 \end{eg}
 
 \end{document}
