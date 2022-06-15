@@ -131,7 +131,72 @@ Note: We consider \( S \), not \( t \). Reason: \( K \) does not depend on param
 	We expect \( K \) to be zero. We can easily compute
 
 	\[ S\left( t \right)=\int_{0}^{t} \sqrt{1^2-0^2} dt=t \]
+
+	% \begin{figure}[H]
+	%   \centering
+	%   \def\svgwidth{1\textwidth}
+	%   \import{./figures/}{fig23.pdf_tex}
+	% \end{figure}
+
+	Here we have \( S\left( t \right) = t \). Now we compute \( \vec{T} \). We have \( \vec{v}\left( t \right)=\left( 1,0 \right) \), and \( \left| \vec{v}\left( t \right) \right| = 1 \). Then \( \vec{T}\left( t \right)=\vec{v}\left( t \right)=\left( 1,0 \right) \). Furthermore, we get that
+
+	\[ \frac{d \vec{T}}{dS} = 0 \quad\wedge\quad K = 0 \]
 \end{eg}
 
-\end{document}
+\begin{eg}
+	Consider a circle of radius \( R \) with
 
+	\[ \vec{r}\left( t \right) = \left( R \cos t, R \sin t \right), \quad 0 \leq t \leq 2\pi \]
+
+	The velocity is
+
+	\[ \vec{v}\left( t \right)=\left( -R \sin t, R \cos t \right) \]
+
+	We get that \( \left| \vec{v}\left( t \right) \right| = R \), then
+
+	\[ \vec{T}\left( t \right)=\frac{\vec{v}\left( t \right)}{\left| \vec{v}\left( t \right) \right|} = \left( -\sin t, \cos t \right) \]
+
+	To compute \( K \), we need to express \( \vec{T} \) in terms of \( \vec{S}\left( t \right) \). We saw that
+
+	\[ S\left( t \right)=R \cdot t \Rightarrow t = \frac{S}{R}  \]
+
+	Now we compute
+
+	\[ \frac{d \vec{T}}{dS} = \left( - \frac{1}{R} \cos \frac{S}{R} , - \frac{1}{R} \cos \frac{S}{R}  \right) \]
+
+	Finally, we have
+
+	\[ K = \left| \frac{d \vec{T}}{dS} \right|=\sqrt{\frac{1}{R^2}\left( \cos \frac{S}{R} \right)^2 + \frac{1}{R^2}\left( \sin \frac{S}{R}  \right)^2}=\frac{1}{R}  \]
+
+	We have non-zero, constant curvature, we also have that \( \rho = R \). Note that \( K \rightarrow 0  \), as \( r \rightarrow \infty \)
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{1\textwidth}
+		\import{./figures/}{fig24.pdf_tex}
+	\end{figure}
+\end{eg}
+
+\begin{prop}
+	We have that
+
+	\[ K = \frac{1}{\left| \vec{v} \right|} = \left| \frac{d \vec{T}}{dt} \right| \]
+\end{prop}
+
+\begin{eg}
+	Consider again
+
+	\[ \vec{r}\left( t \right) = \left( R \cos t, R \sin t \right) \]
+
+	We have seen that
+
+	\[ \left| \vec{v}\left( t \right) \right|, \vec{T}\left( t \right)=\left( -\sin t, \cos t \right) \]
+
+	To get \( K \), we compute
+
+	\[ \frac{d \vec{T}}{dt} = \left( - \cos t, - \sin t \right) \]
+\end{eg}
+
+
+
+\end{document}
