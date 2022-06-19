@@ -1,15 +1,192 @@
-tgest
-tgest
-tgest
-tggest
-tgest
-tgest
-gtgest
-tgest
-gi gigi tgest
-tgest
-tgest
-tgest
-tgest
-tgest
-tgest
+\documentclass{article}
+\input{preamble.tex}
+\begin{document}
+\section{Lecture 11}
+
+\subsection{Operations on fields}
+
+\begin{eg}
+	Consider \( \vec{F}\left( x,y,z \right) = \left( x^2,y^2,z^2 \right) \), that is
+
+	\[ P =x^2, \quad Q = y^2, \quad R=z^2 \]
+
+	Its divergence is
+
+	\[ \nabla \cdot  \vec{F} = \frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z} = 2x+2y+2z \]
+
+	We can check that \( \vec{F} \) is a gradient field. We have that \( \vec{F}=\nabla f \), with the potential
+
+	\[ f\left( x,y,z \right)=\frac{1}{3} \left( x^2+y^2+z^2 \right)  \]
+\end{eg}
+
+\( \nabla \times \vec{F} \) is computed as a determinant. We can use the cofactor, or the Laplace expansion.
+
+\[ \nabla \times \vec{F} =
+	\left|\begin{bmatrix}
+		\vec{i}    & \vec{j}    & \vec{k}    \\
+		\partial_x & \partial_y & \partial_z \\
+		P          & Q          & R
+	\end{bmatrix}\right| = \begin{bmatrix}
+		\partial_{y} & \partial_{z} \\
+		Q            & R
+	\end{bmatrix}\vec{i} - \begin{bmatrix}
+		\partial_{x} & \partial_{z} \\
+		P            & R
+	\end{bmatrix}\vec{j} + \begin{bmatrix}
+		\partial_{x} & \partial_{y} \\
+		P            & Q
+	\end{bmatrix}\vec{k}\]
+
+\[= \vec{i}\left(\partial_y R - \partial_z Q \right) -\vec{j}\left(\partial_x R - \partial_z P \right) + \vec{k}\left(\partial_x - Q \partial_y P \right)\]
+
+This is a concrete formula for \( \nabla \times \vec{F} \).
+
+\begin{eg}
+	Consider \( \vec{F} = xy \vec{i} + \left( x+z \right)\vec{j} + yz \vec{k} \). We compute
+
+	\[ \nabla \times  \vec{F} =  \vec{i}\left(\partial_y R - \partial_z Q \right) -\vec{j}\left(\partial_x R - \partial_z P \right) + \vec{k}\left(\partial_x - Q \partial_y P \right) \]
+
+	where
+
+	\begin{align*}
+		 & P = xy, & Q =x+z, &  & R = yz
+	\end{align*}
+
+	\[ \nabla \times \vec{F} = \left( 2-1 \right)\vec{i} + \left( 1-x \right)\vec{k} \]
+\end{eg}
+
+\begin{note}
+	Gradient and divergence can be defined in any dimension. The curl is only defined in up to three dimensions.
+\end{note}
+
+\subsection{Intepretation of Divergence}
+
+Think of \( \vec{F} \) as the velocity of a fluid. \( \nabla \cdot \vec{F} \) at a point \( P \) is the amount of fluid entering / leaving a small region around \( P \).
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig31.pdf_tex}
+\end{figure}
+
+\begin{eg}
+	Consider \( \vec{F_{1}}\left( x,y \right)= \left( x,y \right) \), then
+
+	\[ \nabla \cdot  \vec{F_{1}} = \frac{\partial x}{\partial x} + \frac{\partial y}{\partial y}+2 \]
+
+	This corresponds to fluid leaving the region. Similarily for \( \vec{F_{2}} = \left( -x,-y \right) \), then
+
+	\[ \nabla \cdot \vec{F}_{2} = \frac{\partial \left( -x \right)}{\partial x} + \frac{\partial \left( -y \right)}{\partial y}=-2 \]
+
+	This corresponds to fluid entering the region. Finally consider \( \vec{F}_{3}=\left( 0,1 \right) \), then
+
+	\[ \nabla \cdot \vec{F}_{3} =0 \]
+
+	This is an equillibrium situation.
+\end{eg}
+
+\subsection{Interpretation of Curl}
+
+\( \nabla \times  \vec{F} \) measures the "rotation" of \( \vec{F} \).
+
+\begin{eg}
+	Consider \( \vec{F}\left( x,y,z \right)=\left( x^2,0,0 \right) \). We expect no rotation, we compute
+
+	\[ \nabla \times \vec{F} =
+		\left|\begin{bmatrix}
+			\vec{i}    & \vec{j}    & \vec{k}    \\
+			\partial_x & \partial_y & \partial_z \\
+			x^2        & 0          & 0
+		\end{bmatrix}\right| = 0 \]
+
+	\begin{figure}[H]
+		\centering
+		\def\svgwidth{0.5\textwidth}
+		\import{./figures/}{fig32.pdf_tex}
+	\end{figure}
+\end{eg}
+
+\begin{eg}
+	Consider \( \vec{F}\left( x,y,z \right)=\left( -\omega y, \omega x, 0 \right) \), where \( \omega \) is a non-zero constant. We compute
+
+	\[ \nabla \times \vec{F} =
+		\left|\begin{bmatrix}
+			\vec{i}    & \vec{j}    & \vec{k}    \\
+			\partial_x & \partial_y & \partial_z \\
+			-\omega y  & \omega x   & 0
+		\end{bmatrix}\right| = \begin{bmatrix}
+			\partial_{x} & \partial_{y} \\
+			-\omega y    & -\omega x
+		\end{bmatrix}\vec{k} = 2\omega \vec{k} \]
+
+	\( \nabla \times \vec{F} \neq 0 \) gives non-zero rotation. Also \( \nabla \times \vec{F} = \text{ const} \) gives that that there is some rotation everywhere.
+
+	For a physical intepretation of this, we can write
+
+	\[ \vec{v}=\vec{F}, \quad \vec{\omega}=\left( 0,0,\omega \right), \quad \vec{r}=\left( x,y,z \right) \]
+
+	Then we can check that \( \vec{v}=\vec{\omega}\cdot \vec{r} \). This is the velocity corresponding to the angular velocity \( \vec{\omega} \)
+
+\end{eg}
+
+\subsection{Scalar Field from Gradient}
+
+Suppose that we know \(\nabla f \). Can we recover \( f \)? Yes, up to the initial conditions. The strategy is the following, first we write
+
+\[ \vec{F} = \nabla f = \left( P,Q,R \right)\]
+
+By the definition of the gradient field, we have
+
+\[ \nabla f = \left( \frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z} \right) \]
+
+Comparing, we get
+
+\[ \frac{\partial f}{\partial x}=P, \quad \frac{\partial f}{\partial y}=Q,\quad,\quad \frac{\partial f}{\partial x}=R \]
+
+\begin{eg}
+	Suppose we are given the gradient field
+
+	\[ \vec{F}=\nabla f = \left( 2x+2y, \frac{1}{2} x^2+3y \right) \]
+
+	We want to find \( f \), we must have
+
+	\[ \frac{\partial f}{\partial x}=2x+2y,\quad \frac{\partial f}{\partial y}=\frac{1}{2} x^2+3y \]
+
+	Integrating the first equation in \( x \) gives us
+
+
+	\begin{align*}
+		f\left( x,y \right) & =\int\left( 2x+xy \right)dx                \\
+		                    & = x^2 + \frac{1}{2} x^2y+g\left( y \right)
+	\end{align*}
+
+	Where \( g\left( y \right) \) is the integration constant. It can depend on \( y \).
+
+	Now we compute \( \frac{\partial f}{\partial y} \). We get
+
+	\[ \frac{\partial f}{\partial y}=\frac{1}{2} x^2 + \frac{d g}{dy} \]
+
+	But we also have that \( \frac{\partial f}{\partial y}=\frac{1}{2} x^2 + 3y \).
+
+	Comparing them, we get
+
+	\[ \cancel{\frac{1}{2} x^2} + \frac{d g}{dy} = \cancel{\frac{1}{2} x^2} + 3y \]
+
+	Then \( \frac{d g}{dy} = 3y \). Integrating in \( y \) we get
+
+	\[ g\left( y \right)=\int 3ydy = \frac{3}{2} y^3 + C \]
+
+	Here, \( C \) is a constant. Finally, inserting it, we get
+
+	\begin{align*}
+		f\left( x,y \right) & =x^2+\frac{1}{2} x^2 y + g\left( k \right) \\
+		                    & = x^2+\frac{1}{2} x^2y + \frac{3}{2} y^3+C
+	\end{align*}
+
+	The constant \( C \) is usually not important. It can be fixed by an inital condition. For instance \( f\left( 0,0 \right) \) implies that \( C =0 \)
+
+
+
+\end{eg}
+
+\end{document}

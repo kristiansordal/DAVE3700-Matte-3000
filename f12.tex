@@ -1,0 +1,49 @@
+\documentclass{article}
+\input{preamble.tex}
+
+\begin{document}
+\section{Lecture 12}
+\subsection{Identities Between Operations}
+
+We have seen three operations defined by \( \nabla \).
+
+\[ \text{Gradient: } \nabla f, \quad \text{Divergence: } \nabla \cdot  \vec{F}, \quad \text{Curl: } \nabla \times  \vec{F} \]
+
+There are many identities, we'll now look at one.
+
+\begin{prop}
+	For any scalar field \( f \), we have
+
+	\[ \nabla \times  \left( \nabla f \right)=0 \]
+\end{prop}
+
+\begin{proof}
+	We have \( \nabla f = \left( f_{x},f_{y},f_{z} \right) \), then
+
+	\[ \nabla \times \left( \nabla f \right) =
+		\left|\begin{bmatrix}
+			\vec{i}    & \vec{j}    & \vec{k}    \\
+			\partial_x & \partial_y & \partial_z \\
+			f_{x}      & f_{y}      & f_{z}
+		\end{bmatrix}\right| = \left( f_{zy}-f_{yz}, -f_{zx}+f_{xz},f_{yx} - f_{xy} \right)\]
+
+	But partial derivatives can be exchanged. Then we find that \( \nabla \times \left( \nabla f \right)= 0 \)
+\end{proof}
+
+We are going to use this when we discuss conservative fields.
+
+\subsection{Line Integrals}
+
+Consider the curve \( C \) with
+
+\[ \vec{r}\left( t \right)= \left( x\left( t \right),y\left( t \right) \right), t_{0} \leq t \leq t_{1}  \]
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{1\textwidth}
+	\import{./figures/}{fig33.pdf_tex}
+\end{figure}
+\incfig[1]{Bbv}
+
+tesgit
+\end{document}

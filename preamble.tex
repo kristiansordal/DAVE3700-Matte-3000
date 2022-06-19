@@ -1,4 +1,4 @@
-Some basic packages
+% Some basic packages
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1.2in]{geometry}
 \usepackage{textcomp}
@@ -23,7 +23,6 @@ Some basic packages
 \usepackage{emptypage}
 \usepackage{subcaption}
 \usepackage{multicol}
-\usepackage{xcolor}
 
 % Math stuff
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
@@ -144,6 +143,7 @@ Some basic packages
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[sibling=definition, style=thmredbox, name=Corollary]{corollary}
 \declaretheorem[style=idea, style=thmredbox, name=Idea]{idea}
+% \declaretheorem[style=idea, style=thmredbox, name=Note]{note}
 \declaretheorem[style=idea, style=thmredbox, name=Proposition]{prop}
 \declaretheorem[sibling=definition, style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[sibling=definition, style=thmredbox, name=Lemma]{lemma}
@@ -253,13 +253,13 @@ Some basic packages
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
+\newcommand{\incfig}[2][1]{%
+	% \begin{center}
+	\def\svgwidth{#1\columnwidth}
+	\import{./figures/}{#2.pdf_tex}
+	% \end{center}
 }
-
 % Fix some stuff
 % %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
 \pdfsuppresswarningpagegroup=1
-
 \author{Kristian Sørdal}
