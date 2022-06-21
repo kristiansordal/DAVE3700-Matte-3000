@@ -8,7 +8,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="template.svg"
+   sodipodi:docname="fig36.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -508,9 +508,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9943739"
-     inkscape:cx="270.01915"
-     inkscape:cy="155.37415"
+     inkscape:zoom="1.9887478"
+     inkscape:cx="247.14044"
+     inkscape:cy="266.24794"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -578,5 +578,18 @@
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.421322;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#marker-arrow-1.5923999999999998-0-93)"
        d="m -82.82823,365.54383 c 93.366909,0 93.366909,0 93.366909,0"
        id="path18644-7-2" />
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.491543"
+       id="path1188"
+       cx="35.705658"
+       cy="220.00821"
+       rx="8.3960285"
+       ry="2.3369949" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.491543"
+       id="path1292"
+       cx="66.516312"
+       cy="246.40324"
+       r="19.782648" />
   </g>
 </svg>
