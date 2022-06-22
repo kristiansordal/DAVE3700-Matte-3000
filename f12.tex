@@ -41,6 +41,179 @@ Consider the curve \( C \) with
 
 \begin{figure}[H]
 	\centering
-	\incfig{testersa}
+	\incfig[0.8]{lineintegrals}
 \end{figure}
+
+\[ \Delta x = x\left( t+\Delta t \right)-x\left( t \right), \quad \Delta y = y\left( t+\Delta t \right)-y\left( t \right) \]
+
+The distance between the two points is
+
+\[ \Delta S = \sqrt{\left( \Delta x^2\right) + \left( \Delta y \right)^2 } \]
+
+When \( \Delta t  \) is small, we can use the following approximation
+
+\[ \Delta x \approx \frac{d x}{dt}\Delta t ,\quad \Delta y \approx \frac{d y}{dt}\Delta t \]
+
+Then, for the distance, we get
+
+\[ S = \sqrt{\left( \frac{d x}{dt}\Delta t^2 \right)+\left( \frac{d y}{dt}\Delta t^2 \right)}=\Delta t \sqrt{\left( \frac{d x}{dt} \right)^2+\left( \frac{d y}{dt} \right)^2} \]
+
+Letting \( \Delta t \rightarrow 0 \) leads to the following
+
+\begin{definition}
+	The line integral of \( f\left( x,y \right) \) along a curve \( C \) is defined by
+
+	\[ \int_{C}fds = \int_{t_{0} }^{t_{1} } f\left( x\left( t \right),y\left( t \right) \right)\sqrt{x'\left( t \right)^2+y'\left( t \right)^2} dt \]
+\end{definition}
+
+\begin{observe}
+	Note that \( f \) is restricted to \( \vec{r}\left( t \right)=\left( x\left( t \right),y\left( t \right) \right) \). When \( f=1 \), we recover the arc length.
+\end{observe}
+
+\begin{eg}
+	Consider \( C \) defined by
+
+	\[ x\left( t \right)=t, \quad y\left( t \right)=0, \quad 0 \leq t \leq 1 \]
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.8]{f12eg1}
+	\end{figure}
+
+	First, we compute
+
+	\[ \sqrt{x'\left( t \right)^2 + y'\left( t \right)^2}dt = \sqrt{1^2+0^2}=1 \]
+
+	Now, consider \( f\left( x,y \right)=x^2+y \). We want to compute \( \int_{C}fds \). Restricting \( f \) to \( C \) gives
+
+	\[ f\left( x\left( t \right),y\left( t \right) \right) = x\left( t \right)^2+y\left( t \right)^2 = t^2+0 = t^2 \]
+
+	Then we obtain
+
+	\[ \int_{C}fds=\int_{0}^{1} t^2 \cdot 1 dt=\frac{1}{3}  \]
+\end{eg}
+
+\begin{note}
+	Line integrals can be used to compute the mass of a 1-dimensional object. The curve \( C \) describes the object, and the function \( \int_{C}fds \) is the mass.
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.4]{f12note1}
+	\end{figure}
+\end{note}
+
+\subsection{Parametrization and Orientation}
+The next result is as for the arc length.
+
+\begin{prop}
+	The integral \( \int_{C}fds \) does not depent on the parametrization of \( C \).
+\end{prop}
+
+We will consider a special case
+
+\begin{eg}
+	Consider \( C \) with
+
+	\[ \vec{r}\left( t \right)=\left( x\left( t \right),y\left( t \right) \right), t_{0} \leq t \leq t_{1}  \]
+
+	We have
+
+	\[ \text{Start: } A = \left( x\left( t_{0}  \right), y \left( t_{0}  \right) \right), \quad \text{End: } B = \left( x\left( t_{1}  \right), y\left( t_{1}  \right) \right) \]
+
+	We want to go from \( B \) to \( A \).
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{f12eg2}
+	\end{figure}
+
+	We can do this in the following manner
+
+	\[ \vec{r}_{\text{opp}}=\left( x\left( -t \right),y\left( -t \right) \right), \quad -t_{1} \leq t \leq -t_{0}  \]
+
+
+	Note that
+	\begin{align*}
+		 & \vec{r}_{\text{opp}}\left( -t_{1}  \right)= \left( x\left( t1 \right),y\left( t_{1}  \right) \right) = B \\
+		 & \vec{r}_{\text{opp}}\left( -t_{0}  \right)= \left( x\left( t0 \right),y\left( t_{0}  \right) \right) = A \\
+	\end{align*}
+\end{eg}
+
+\begin{eg}
+	Consider the segment \( C \) from \( \left( 0,0 \right) \) to \( \left( 1,0 \right) \). Take \( f\left( x,y \right)=x \). Show that \( \int_{C}fds=\frac{1}{2}  \) using \( \vec{r}\left( t \right) \) and \( \vec{r}_{\text{opp}}\left( t \right) \).
+
+	If \( C \) parametrized by \( \vec{r}\left( t \right) \), we use \( -C \) when considering \( \vec{r}_{\text{opp}}\left( t \right) \). We have
+
+	\[ \int_{C}fds=\int_{-C}fds \]
+
+	The situation will be different for vector fields.
+\end{eg}
+
+\subsection{Case of Vector Fields}
+
+Consider the curve with
+
+\begin{align*}
+	 & \vec{r}\left( t \right)=\left( x\left( t \right),y\left( t \right) \right), \quad t_{0} \leq t \leq t_{1}     \\
+	 & \vec{r'} \left( t \right)=\left( x'\left( t \right),y'\left( t \right) \right) \quad \text{(Velocity vector)}
+\end{align*}
+
+\begin{definition}
+	The line integral of \( \vec{F} \) along \( C \) is
+
+	\[ \int_{C}\vec{F} \cdot d\vec{r}= \int_{t_{0} }^{t_{1} } \vec{F}\left( \vec{r}\left( t \right) \right) \cdot \vec{r}' dt \]
+
+	Here \( \vec{F}\left( \vec{r}\left( t \right) \right) = \vec{F}\left( x\left( t \right),y\left( t \right) \right) \)
+\end{definition}
+
+In physics, we have that \( \vec{F} \) is the force, and \( \int_{C}\vec{F}d \vec{r} \) is the work done by \( \vec{F} \) along \( C \). The elementary case is given by \( W = FS \), or work = force \(  \cdot  \) displacement. More explicitly, we consider
+
+\[ \vec{F}\left( x,y \right)=\left( P\left( x,y \right),Q\left( x,y \right) \right)  \]
+
+Then we have
+
+\[ \vec{F}\left( \vec{r}\left( t \right) \right) \cdot \vec{r}'\left( t \right)= P\left( x\left( t \right),y\left( t \right) \right) \cdot x'\left( t \right)+Q\left( x\left( t \right),y\left( t \right) \right) \cdot  y'\left( t \right) \]
+
+The line integral is then
+
+\[ \int_{C}\vec{F} \cdot d \vec{r} = \int_{t_{0} }^{t_{1} } P\left( x\left( t \right),y\left( t \right) \right) \cdot  x'\left( t \right) dt + \int_{t_{0} }^{t_{1} } Q\left( x\left( t \right),y\left( t \right) \right) \cdot y'\left( t \right) dt \]
+
+We will write the expression as
+
+\[ \int_{C}\vec{F} \cdot d \vec{r} = \int_{C}P dx + \int_{C} Q dy \]
+
+\begin{eg}
+	Consider the curve \( C \) with
+
+	\[ \vec{r}\left( t \right)=\left( t,t^2 \right), \quad 0 \leq t \leq 1 \]
+
+	\begin{figure}[H]
+		\centering
+		\incfig[1]{f12eg3}
+	\end{figure}
+
+	We have \( x\left( t \right)=t \) and \( y\left( t \right)=t^2 \), its derivative is
+
+	\[ \vec{r}\left( t \right)=\left( x'\left( t \right),y'\left( t \right) \right)=\left( 1,2t \right) \]
+
+	Now consider the vector field
+
+	\[ \vec{F}\left( x,y \right)=\left( x+y,x \right) \]
+
+	That is \( P = x + y \) and \( Q =x \), when this is restricted to \( C \), we get
+
+	\[ \vec{F}\left( \vec{r}\left( t \right) \right) = \left( x\left( t \right)+y\left( t \right), y\left( t \right) \right) = \left( t+t^2,t \right) \]
+
+	We want to compute
+
+	\[ \vec{F}\left( \vec{r}\left( t \right) \right) \cdot \vec{r}' = \left( t+t^2,t \right) \cdot  \left( 1,2t \right) = \left( 3t^2 + t \right) \]
+
+	We finally obtain
+
+	\[ \int_{C}\vec{F}\cdot d \vec{r} = \int_{0}^{1} \left( 3t^2+t \right) dt = \frac{3}{2}  \]
+\end{eg}
+
+
+
 \end{document}
