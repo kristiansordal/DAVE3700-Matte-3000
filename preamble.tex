@@ -16,6 +16,9 @@
 \definecolor{gruvtextdark}{HTML}{ebdbb2}
 \definecolor{gruvbglight}{HTML}{f9f5d7}
 \definecolor{gruvtextlight}{HTML}{3c3836}
+\definecolor{NavyBlue}{HTML}{266bbd}
+\definecolor{RawSienna}{HTML}{94330e}
+\definecolor{ForestGreen}{HTML}{149b52}
 % \pagecolor{gruvbgdark}
 % \color{gruvtextdark}
 
@@ -51,7 +54,7 @@
 % \usepackage{stmaryrd} % for \lightning
 % \newcommand\contra{\scalebox{1.5}{$\lightning$}}
 
-% \let\phi\varphi
+\let\phi\varphi
 
 % Command for short corrections
 % Usage: 1+1=\correct{3}{2}
@@ -70,58 +73,8 @@
 
 % Environments
 \makeatother
+
 % For box around Definition, Theorem, \ldots
-% \usepackage{mdframed}
-% \mdfsetup{skipabove=1em,skipbelow=1em}
-% \theoremstyle{definition}
-
-
-
-% \newmdtheoremenv[nobreak=true]{prop}{Proposition}
-% \newmdtheoremenv[nobreak=true]{theorem}{Theorem}
-% \newmdtheoremenv[nobreak=true]{corollary}{Corollary}
-% % \newmdtheoremenv[nobreak=ture]{prf}{Proof}
-% \newmdtheoremenv[nobreak=true]{definition}{Definition}
-
-
-% % \let\proof\relax
-% % \let\endproof\relax
-% \newtheoremstyle{exampstyle}
-% {\topsep} % Space above
-% {\topsep} % Space below
-% {} % Body font
-% {} % Indent amount
-% {\bfseries} % Theorem head font
-% {.} % Punctuation after theorem head
-% {.5em} % Space after theorem head
-% {} % Theorem head spec (can be left empty, meaning `normal')
-
-% \theoremstyle{exampstyle}\newtheorem*{eg}{Example}
-% \theoremstyle{exampstyle}\newtheorem*{notation}{Notation}
-% \theoremstyle{exampstyle}\newtheorem*{previouslyseen}{As previously seen}
-% \theoremstyle{exampstyle}\newtheorem*{remark}{Remark}
-% \theoremstyle{exampstyle}\newtheorem*{note}{Note}
-% \newtheorem*{problem}{Problem}
-% \newtheorem*{observe}{Observe}
-% \newtheorem*{property}{Property}
-% \newtheorem*{intuition}{Intuition}
-
-% % \newtcbtheorem{uctheorem}{Theorem}{uncheckedstyle}{theo}
-% % End example and intermezzo environments with a small diamond (just like proof
-% % environments end with a small square)
-% \usepackage{etoolbox}
-% \AtEndEnvironment{vb}{\null\hfill$\diamond$}%
-% \AtEndEnvironment{intermezzo}{\null\hfill$\diamond$}%
-% % \AtEndEnvironment{proof}{\null\hfill$\square$}%
-% % \AtEndEnvironment{opmerking}{\null\hfill$\diamond$}%
-
-% % Fix some spacing
-% % http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
-% \makeatletter
-% \def\thm@space@setup{%
-% 	\thm@preskip=\parskip \thm@postskip=0pt
-% }
-
 % theorems
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
@@ -131,20 +84,75 @@
 
 \makeatletter
 
-\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
-\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
-\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, spaceabove=0.5cm, spacebelow=0.5cm]{thmbluebox}
-% \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont]{thmbluebox}
-\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont]{thmblueline}
-\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-\declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no]{idea}
+% \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
+% \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
+% \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, spaceabove=0.5cm, spacebelow=0.5cm]{thmbluebox}
+% % \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont]{thmbluebox}
+% \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont]{thmblueline}
+% \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no]{idea}
 
+\declaretheoremstyle[
+	headfont=\bfseries\color{ForestGreen!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+		}
+]{thmgreenbox}
+
+\declaretheoremstyle[
+	headfont=\bfseries\color{NavyBlue!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+		}
+]{thmbluebox}
+
+\declaretheoremstyle[
+	headfont=\bfseries\color{NavyBlue!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=NavyBlue
+		}
+]{thmblueline}
+
+\declaretheoremstyle[
+	headfont=\bfseries\color{RawSienna!70!black}, bodyfont=\normalfont,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=RawSienna, backgroundcolor=RawSienna!5,
+		}
+]{thmredbox}
+
+\declaretheoremstyle[
+	headfont=\bfseries\color{RawSienna!70!black}, bodyfont=\normalfont,
+	numbered=no,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=RawSienna, backgroundcolor=RawSienna!1,
+		},
+	qed=\qedsymbol
+]{thmproofbox}
+
+\declaretheoremstyle[
+	headfont=\bfseries\color{NavyBlue!70!black}, bodyfont=\normalfont,
+	numbered=no,
+	mdframed={
+			linewidth=2pt,
+			rightline=false, topline=false, bottomline=false,
+			linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+		},
+]{thmexplanationbox}
 
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[sibling=definition, style=thmredbox, name=Corollary]{corollary}
 \declaretheorem[style=idea, style=thmredbox, name=Idea]{idea}
-% \declaretheorem[style=idea, style=thmredbox, name=Note]{note}
 \declaretheorem[style=idea, style=thmredbox, name=Proposition]{prop}
 \declaretheorem[sibling=definition, style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[sibling=definition, style=thmredbox, name=Lemma]{lemma}
