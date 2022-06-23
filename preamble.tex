@@ -91,7 +91,7 @@
 % \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont]{thmblueline}
 % \declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
 % \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
-% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no]{idea}
+\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, numbered=no]{idea}
 
 \declaretheoremstyle[
 	headfont=\bfseries\color{ForestGreen!70!black}, bodyfont=\normalfont,
@@ -135,7 +135,7 @@
 	mdframed={
 			linewidth=2pt,
 			rightline=false, topline=false, bottomline=false,
-			linecolor=RawSienna, backgroundcolor=RawSienna!1,
+			linecolor=RawSienna, backgroundcolor=RawSienna!0,
 		},
 	qed=\qedsymbol
 ]{thmproofbox}
@@ -152,7 +152,7 @@
 
 \declaretheorem[style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[sibling=definition, style=thmredbox, name=Corollary]{corollary}
-\declaretheorem[style=idea, style=thmredbox, name=Idea]{idea}
+\declaretheorem[style=idea, name=Idea]{idea}
 \declaretheorem[style=idea, style=thmredbox, name=Proposition]{prop}
 \declaretheorem[sibling=definition, style=thmredbox, name=Theorem]{theorem}
 \declaretheorem[sibling=definition, style=thmredbox, name=Lemma]{lemma}

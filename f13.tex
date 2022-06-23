@@ -137,8 +137,85 @@ In general, \( \int_{C}\vec{F}\cdot d \vec{r} \) depends on the curve \( C \). H
 
 	Note that: \( \vec{r}\left( t_{0}  \right)=\vec{p} \) and \( r\left( t_{1}  \right)=\vec{q} \). Using \( \vec{F}=\nabla f \), we have
 
-	\[ \int_{C}\vec{F} \cdot  d \vec{r} = \int_{t_{0} }^{t_{1} } \vec{F}\left( \vec{r}\left( t \right) \right)\cdot  \vec{r}' \left( t \right)dt \]
+
+	\begin{align*}
+		\int_{C}\vec{F} \cdot  d \vec{r} & = \int_{t_{0} }^{t_{1} } \vec{F}\left( \vec{r}\left( t \right) \right)\cdot  \vec{r}' \left( t \right)dt  \\
+		                                 & = \int_{t_{0} }^{t_{1} } \nabla f\left( \vec{r}\left( t \right) \right)\cdot  \vec{r}'\left( t \right) dt
+	\end{align*}
+
+	From the chain rule, we get
+
+	\[ \frac{d f\left( \vec{r}\left( t \right) \right)}{dt}=\nabla f\left( \vec{r}\left( t \right) \right)\cdot \vec{r}'\left( t \right) \]
+
+	Using this, we obtain
+
+	\[ \int_{C}\vec{F}\cdot d \vec{r} = \int_{t_{0} }^{t_{1} } \frac{d f\left( \vec{r}\left( t \right) \right)}{dt} dt \]
+
+	Using the fundamental theorem of calculus, we get
+
+
+	\begin{align*}
+		\int_{C}\vec{F} \cdot  d \vec{r} & = f\left( \vec{r}\left( t_{1}  \right) \right) - f\left( \vec{r}\left( t_{0}  \right) \right) \\
+		                                 & = f\left( \vec{q} \right)-f\left( \vec{p} \right)
+	\end{align*}
+
 \end{proof}
+
+If \( \vec{F}=\nabla f \), then \( \vec{F} \) is conservative, since \( \int_{C}\vec{F}\cdot d \vec{r} = f\left( \vec{q}\right) - f\left( \vec{p}  \right) \) only depends on \( \vec{p} \text{ and } \vec{q} \)
+
+\begin{eg}
+	Consider the previous example with \( \vec{F}=\left( 1,1 \right) \). We saw \( \vec{F}= \nabla f \) with \( f\left( x,y \right)=x+y \).
+	\medskip
+
+	For any curve starting at \( \vec{p}=\left( 0,0 \right) \), and ending at \( \vec{q}=\left( 1,0 \right) \), we have
+
+	\begin{align*}
+		\int_{C}\vec{F}\cdot d \vec{r} & = f\left( \vec{q} \right) - f\left( \vec{p} \right) \\
+		                               & = f\left( 1,0 \right)-f\left( 0,0 \right)           \\
+		                               & = 1-0 = 1
+	\end{align*}
+
+	Note that we could take
+
+	\[ \tilde{f}\left( x,y \right)=x+y+c \]
+
+	With \( c \) being a constant. This gives the same result.
+
+	\begin{align*}
+		\int_{C}\vec{F} \cdot  d \vec{r} & = \tilde{f}\left( 1,0 \right) - \tilde{f}\left( 0,0 \right) \\
+		                                 & = 1 + c - c = 0
+	\end{align*}
+\end{eg}
+
+\begin{eg}
+	Consider two objects \( A \text{ and } B \) of mass \( M \text{ and } m \), as in the picutre
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{objectmass}
+	\end{figure}
+
+	The force exerted by \( A \) on \( B \) is
+
+	\[ \vec{F}\left( x,y,z \right)=-G \frac{Mm}{r^2}\hat{r} \]
+
+	Here we have \( r=\sqrt{x^2+y^2+z^2} \) ant \( \hat{r}=\frac{\left( x,y,z \right)}{r} \). It is a unit vector pointing at \( B \), from \( A \). \( \vec{F} \), can be rewritten as
+
+	\[ \vec{F}\left( x,y,z \right)=-GMm \frac{\left( x,y,z \right)\left( x^2+y^2+z^2 \right)^{\frac{3}{2} }}{} \]
+
+	Consider the function
+
+	\[ V = \frac{GMm}{r} = GMm \frac{1}{\left( x^2+y^2+z^2 \right)^{\frac{1}{2} }} \]
+
+	We compute
+
+	\[ \frac{\partial V}{\partial x}-GMm \frac{1}{2} \cdot  \frac{2x}{\left( x^2+y^2+z^2 \right)^{\frac{3}{2} }} \]
+
+	Similarily for \( y \) and \( z \), then
+
+	\[ \nabla V = -GMm \frac{\left( x,y,z \right)}{\left( x^2+y^2+z^2 \right)^{\frac{3}{2} }} \]
+\end{eg}
 
 
 \end{document}

@@ -1,0 +1,169 @@
+\documentclass{article}
+\input{preamble.tex}
+\begin{document}
+\section{Lecture 14}
+\subsection{Conservative Feilds (cont.)}
+
+We will now explore other criteria for conservative fields.
+
+\begin{prop}
+	Suppose \( \vec{F} \) is conservative, then \( \nabla \times  \vec{F} = 0 \)
+\end{prop}
+
+\begin{proof}
+	Since \( \vec{F} = \nabla f \), we have
+
+	\[ \nabla \times \vec{F} = \nabla \times \nabla f = 0 \]
+
+	This is by an identity previously discussed.
+\end{proof}
+
+The converse for this is also true.
+
+\begin{note}
+	It is easy to check if \( \vec{F} \) is conservative by computing \( \nabla \times  \vec{F} \).
+\end{note}
+
+\begin{definition}
+	A curve is closed if its endpoints coincide.
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.5]{endpoints}
+	\end{figure}
+\end{definition}
+
+\begin{notation}
+	The line integral of \( F \) along a closed curve is called the circulation. It is written as
+
+	\[ \oint_{C}\vec{F}\cdot d \vec{r} \]
+\end{notation}
+
+\begin{prop}
+	If \( \vec{F} \) is conservative, then
+
+	\[ \oint_{C} \vec{F}\cdot  d \vec{r} = 0 \],
+
+	for any closed curve \( C \).
+\end{prop}
+
+\begin{proof}
+	By the gradient theorem, we have
+
+	\[ \oint_{C} \vec{F}\cdot d \vec{r} = f\left( \vec{p} \right)-f\left( \vec{p} \right)=0 \]
+
+	Since the endpoints coincide
+\end{proof}
+
+In summary, we have the following equivalent conditions
+
+\begin{itemize}
+	\item \( \vec{F} \) is conservative
+	\item \( \vec{F}=\nabla f \)
+	\item \( \nabla \times  \vec{F}=0 \)
+	\item \( oint_{C}\vec{F}\cdot d \vec{r} = 0 \), for any closed curve \( C \).
+\end{itemize}
+
+\subsection{Double Integrals}
+
+In two dimensions, we have the following method for computing integrals
+
+
+\begin{figure}[H]
+	\centering
+	\incfig{doubleintegrals}
+\end{figure}
+
+We approximate a region \( R \) by rectangles \( R_{i} \), with areas \( \Delta A_{i} \)
+
+Consider a function \( f\left( x,y \right) \), pick a sample point \( \left( x_{i}, y_{i} \right) \) in each rectangle \( R_{i} \). Then we consider the sum
+
+\[ \sum_{i}^{} f\left( x_{i}^{\star},y_{i}^{\star} \right)\Delta A_{i} \]
+
+The limit \( \Delta A_{i} \), when it exists, gives the double integral.
+
+\begin{definition}
+	The double integral of \( f\left( x,y \right) \) over the region \( R \) is
+
+	\[ \iint_{R}fdA = \lim_{\Delta A_{i}\rightarrow 0} \sum_{n=i}^{} f\left( x_{i}^{\star},y_{i}^{\star} \right)\Delta A_{i}  \]
+\end{definition}
+
+When \( f=1 \), this gives the area of \( R \), or the size of the region \( R \). When \( f > 0 \), the integral is also the volume under \( f \).
+
+\subsection{Some Properties}
+
+We still need concrete forumlas to compute \( \iint_{R}fdA \). First, some general properties.
+
+\begin{prop}
+	Linearity.
+	\medskip
+
+	Let \( a \) and \( b \) be two constants, then
+
+	\[ \int_{R}\left( af+bg \right)dA = a \int_{R}fdA+b \int_{R}gdA \]
+\end{prop}
+
+\begin{proof}
+	This follows the linearity of limits.
+\end{proof}
+
+The next property is related to portions of the region of integrations.
+
+
+\begin{figure}[H]
+	\centering
+	\incfig{overlappingregions}
+\end{figure}
+
+\begin{prop}
+	Partitions
+	\medskip
+
+	Let \( R \text{ and } S \) be non-overlapping regions. Then we have
+
+	\[ \int_{R\cup B}fdA = \int_{R}fdA + \int_{S}fdA \]
+\end{prop}
+
+\begin{idea}
+	The total area is the sum of the areas.
+\end{idea}
+\subsection{Integrations Over Rectangles}
+
+Integrations over a rectangle is the easiest case of a double integral.
+
+
+\begin{figure}[H]
+	\centering
+	\incfig{integralrectangle}
+\end{figure}
+
+General rectangle:
+
+\[ R = \left( a,b \right)\times \left( c,d \right) \]
+
+\begin{prop}
+	Let \( R = \left( a,b \right)\times \left( c,d \right) \), then
+
+
+	\[ \iint_{R}fdA = \int_{a}^{b} \left( \int_{c}^{d} f\left( x,y \right) dy \right) dx = \int_{c}^{d} \left( \int_{a}^{b} f\left( x,y \right) dx \right) dy \]
+
+	We reduce to the case of two ordinary integrals.
+
+\end{prop}
+
+\begin{eg}
+	By simple geometry, the area of a rectangle is \( \left( b-a \right)\cdot \left( d-c \right) \). The double integral gives
+
+	\[ \iint_{R}1dA = \int_{a}^{b} \left( \int_{c}^{d} 1 dy \right) dx = \int_{a}^{b} \left( d-c \right) dx = \left( b-a \right)\cdot \left( d-c \right)\]
+
+\end{eg}
+
+\begin{eg}
+	Compute \( \iint_{R}fdA \) with
+
+	\[ f\left( x,y \right)=xy,\quad R = \left[ 0,1 \right]\times \left[ 0,2 \right] \]
+
+	We compute
+\end{eg}
+\end{document}
