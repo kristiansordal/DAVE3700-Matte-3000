@@ -1,0 +1,144 @@
+\documentclass{article}
+\input{preamble.tex}
+
+\begin{document}
+\section{Lecture 13}
+\subsection{Line Integrals of Vector Fields}
+We have seen the following definition earlier
+
+\[ \int_{C}\vec{F}d \vec{r} = \int_{t_{0} }^{t_{1} } \vec{F}\left( \vec{r}\left( t \right)\right) \cdot  \vec{r}'\left( t  \right)dt \]
+
+We can rewrite this to link with scalarfields, lets consider
+
+\[ \int_{C} = \vec{F}\cdot d \vec{r} = \int_{t_{0} }^{t_{1} } \vec{F}\cdot \vec{v} dt = \int_{t_{0} }^{t_{1} } \vec{F}\cdot \frac{\vec{v}}{\left| \vec{v} \right|}  dt \]
+
+We can see this as the line integral of the field \( \vec{F}\cdot \vec{T} \)
+
+\begin{eg}
+	Consider \( \vec{F} \) is constant and directed along the curve, that is \( \vec{F}=F\vec{T} \), where \( F - \left| \vec{F} \right| \). Then the formula for elementary work (\( W=FS \)) gives
+
+	\[ W=\int_{C}\vec{F}\cdot \vec{T}ds=\int_{C}\vec{F}\vec{T}\cdot \vec{T}ds=F \int_{C}ds=FS \]
+\end{eg}
+
+Now lets consider changes of orientation
+
+\begin{prop}
+	We have that
+
+	\[ \int_{C}\vec{F} \cdot d \vec{r} = -\int_{-C}\vec{F} \cdot  d \vec{r} \]
+
+\end{prop}
+
+\begin{eg}
+	Consider the segment
+
+	\[ \vec{r}\left( t \right) = \left( t,0 \right), \quad 0 \leq t \leq 1 \]
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.5]{f13eg1}
+	\end{figure}
+
+	The opposite parametrization is
+
+	\[ \vec{r}_{\text{opp}}\left( t \right)=\left( -t,0 \right),\quad -1 \leq t \leq 0 \]
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.5]{f13eg1.2}
+	\end{figure}
+
+	We have
+
+	\[ \vec{r}'\left( t \right)=\left( 1,0 \right),\quad \vec{r}_{\text{opp}}\left( t \right)=\left( -1,0 \right) \]
+
+	Consider \( \vec{F}\left( x,y \right)=\left( x,0 \right) \). For \( C \) we have
+
+	\[ \int_{C}\vec{F} \cdot d \vec{r} = \int_{0}^{1} \left( t,0 \right)\cdot \left( 1,0 \right) dt = \int_{0}^{1} t dt=\frac{1}{2}  \]
+
+	For \( -C \), we have
+
+	\[ \int_{-C}\vec{F} \cdot d \vec{r} = \int_{-1}^{0} \left( -t,0 \right)\cdot \left( -1,0 \right) dt=\int_{-1}^{0} t dt=-\frac{1}{2}  \]
+\end{eg}
+
+\subsection{Conservative Vector Fields}
+In general, \( \int_{C}\vec{F}\cdot d \vec{r} \) depends on the curve \( C \). However, sometimes it only depends on the endpoints.
+
+\begin{definition}
+	A vector field \( \vec{F} \) is conservative if \( \int_{C}\vec{F}\cdot d \vec{r} \) depends only on the endpoints of \( C \). That is, if \( C \) and \( C' \) have the same endpoints, then
+
+	\[ \int_{C}\vec{F} \cdot  d \vec{r} = \int_{C'}\vec{F} \cdot  d \vec{r} \]
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.6]{f13def1}
+	\end{figure}
+\end{definition}
+
+\begin{eg}
+	Consider \( \vec{F}=\left( 1,1 \right) \) and
+
+	\[ C: x\left( t \right)=t,\quad y\left( t \right)=0,\quad 0 \leq t \leq 1 \]
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.5]{f13eg1}
+	\end{figure}
+
+	The endpoints are \( \left( 0,0 \right) \) and \( \left( 1,0 \right) \). We compute
+
+	\[ \int_{C}\vec{F} \cdot  d \vec{r} = \int_{0}^{1} dt =1 \]
+
+	Now, lets consider a different curve.
+
+	\[ C': x\left( t \right)=t, \quad y\left( t \right)=t\left( t-1 \right), \quad 0 \leq t \leq 1 \]
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.5]{f13eg2}
+	\end{figure}
+
+	We have the same endpoints as \( C \). The velocity is \( \vec{r}'\left( t \right)=\left( 1,2t-1 \right) \). Then
+
+
+	\begin{align*}
+		\int_{C'}\vec{F} \cdot  d \vec{r} & = \int_{0}^{1} \left( 1,1 \right) \cdot  \left( 1, 2t-1 \right) dt \\
+		                                  & = \int_{0}^{1} 2tdt - 2 \cdot  \frac{1}{2}  = 1
+	\end{align*}
+	At this stage, we cannot conclude \( \vec{F} \) is consrvative (although it is). Note that
+
+	\[ \vec{F}=\nabla f \quad\wedge\quad f\left( x,y \right)=x+y \]
+
+	We will prove that being a gradient field is the condition we want.
+\end{eg}
+
+\begin{theorem}
+	\textbf{The Gradient Theorem}.
+	\medskip
+
+	Suppose \( \vec{F}= \nabla f \), consider a curve \( C \) starting at \( \vec{p} \), and ending at \( \vec{q} \), then
+
+	\[ \int_{C}\vec{F} \cdot d \vec{r} = f\left( \vec{q} \right)-f\left( \vec{p} \right) \]
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig[0.6]{gradienttheorem}
+	\end{figure}
+\end{theorem}
+
+\begin{proof}
+	Pick a parametrization
+
+	\[ \vec{r}\left( t \right),\quad t_{0} \leq t \leq t_{1}  \]
+
+	Note that: \( \vec{r}\left( t_{0}  \right)=\vec{p} \) and \( r\left( t_{1}  \right)=\vec{q} \). Using \( \vec{F}=\nabla f \), we have
+
+	\[ \int_{C}\vec{F} \cdot  d \vec{r} = \int_{t_{0} }^{t_{1} } \vec{F}\left( \vec{r}\left( t \right) \right)\cdot  \vec{r}' \left( t \right)dt \]
+\end{proof}
+
+
+\end{document}
