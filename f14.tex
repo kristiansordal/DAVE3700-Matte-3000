@@ -159,11 +159,98 @@ General rectangle:
 
 \end{eg}
 
+\bigskip
+
 \begin{eg}
 	Compute \( \iint_{R}fdA \) with
 
 	\[ f\left( x,y \right)=xy,\quad R = \left[ 0,1 \right]\times \left[ 0,2 \right] \]
 
 	We compute
+
+	\begin{align*}
+		\iint_{R}xydA & = \int_{y=0}^{2} \left( \int_{x=0}^{1} xy dx \right) dy \\
+		              & = \frac{1}{2} \int_{y=0}^{2} y dy                       \\
+		              & = \frac{1}{2} \cdot  \frac{2^2}{2}                      \\
+		              & = 1
+	\end{align*}
+
+	We can also use
+
+	\begin{align*}
+		\iint_{R}xydA & = \int_{x=0}^{1} \left( \int_{y=0}^{2} xy dy \right) dx \\
+		              & = \frac{2^2}{2}\int_{x=0}^{1} x dx                      \\
+		              & = 2 \cdot  \frac{1}{2}                                  \\
+		              & = 1
+	\end{align*}
 \end{eg}
+
+\subsection{General Regions}
+
+In this section we will consider simple regions.
+
+\begin{definition}
+	A region \( D \) is called \textit{y-simple} if it is of the following form.
+
+	\[ D = \left\{ \left( x,y \right): a \leq x \leq b, \quad c\left( x \right) \leq y \leq d\left( x \right) \right\} \]
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{ysimple}
+	\end{figure}
+\end{definition}
+
+This is the region below \( d\left( x \right) \), and above \( c\left( x \right) \). When \( c\left( x \right) \) = c and \( d\left( x \right)=d \), we get a rectangle.
+
+\begin{prop}
+	Suppose \( D \) is a y-simple region. Then:
+
+	\[ \iint_{D}fdA = \int_{a}^{b} \left( \int_{c\left( x \right)}^{d\left( x \right)} f\left( x,y \right) dy \right) dx \]
+\end{prop}
+
+\begin{note}
+	We first integrate in \( y \), and then in \( x \).
+\end{note}
+
+\begin{eg}
+	Consider
+
+	\[ D = \left\{ \left( x,y \right): -1 \leq x \leq 1, \quad x^2-1 \leq y \leq 1-x^2 \right\} \]
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{ysimpleexample}
+	\end{figure}
+\end{eg}
+
+\( D \) is y-simple with \( c\left( x \right)=x^2-1 \) and \( d\left( x \right)=x^2-1 \). We compute the area of \( D \), we have
+
+\begin{align*}
+	\iint_{D}dA & = \int_{-1}^{1} \left( \int_{x^2-1}^{1-x^2} 1 dy \right) dx                 \\
+	            & = \int_{-1}^{1} \left( \left( 1-x^2 \right)-\left( x^2-1 \right) \right) dx \\
+	            & = 2 \int_{-1}^{1} \left( 1-x^2 \right) dx                                   \\
+	            & = 2 \left( x-\frac{1}{3} x^3 \right)_{-1}^{1}                               \\
+	            & = \frac{8}{3}
+\end{align*}
+
+We can exchange the role of \(x \text{ and } y  \).
+
+\begin{definition}
+	A region \( D \) is \textit{x-simple} if it is of the form
+
+	\[ D = \left\{ \left( x,y \right): a\left( y \right) \leq x \leq b\left( y \right),\quad c \leq y \leq d \right\} \]
+
+	\begin{figure}[H]
+		\centering
+		\incfig{xsimple}
+	\end{figure}
+\end{definition}
+
+\begin{prop}
+	If \( D \) is x-simple, then
+
+	\[ \iint_{D}fdA = \int_{c}^{d} \left( \int_{a\left( y \right)}^{b\left( y \right)} f\left( x,y \right) dx \right) dy \]
+\end{prop}
 \end{document}
