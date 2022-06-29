@@ -37,13 +37,172 @@ More general regions can be partitioned into x-simple and y-simple regions. A re
 	Consider the region
 
 	\[ D =\left\{ \left( x,y \right): 0 \leq x \leq 1, \quad -x \leq y \leq x\right\} \]
-
-
 	\begin{figure}[H]
 		\centering
 		\incfig{ysimpletriangle}
 	\end{figure}
+	This is a y-simple region. We can also describe this triangle using x-simple regions.
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{xsimpletriangle}
+	\end{figure}
+
+	We have two regions:
+
+	\begin{align*}
+		 & D_{1} = \left\{ \left( x,y \right): y \leq x \leq 1, \quad 0 \leq y \leq 1 \right\}   \\
+		 & D_{2} = \left\{ \left( x,y \right): -y \leq x \leq 1, \quad -1 \leq y \leq 0 \right\}
+	\end{align*}
+
+	We have that \( D = D_{1} \cup D_{2}  \), and
+
+	\[ \iint_{D}fdA = \iint_{D_{1} }fdA + \iint_{D_{2} } fdA \]
 \end{eg}
 
+\subsection{Integrations in polar coordinates}
 
+We want to compute \( \iint_{D}fdA  \) using the polar coordinates \( \left( r, \theta \right) \), recall that
+
+\[ x = r \cos \theta, \quad y = r \sin \theta \]
+
+In cartesian coordinates, we use the "infinitesimal area \( dA = dxdy \)". We will now consider small polar regions.
+
+
+\begin{figure}[H]
+	\centering
+	\incfig{polarregions}
+\end{figure}
+
+Recall that area is equal to \( \frac{1}{2} \theta r^2 \).
+
+\begin{align*}
+	\Delta A & = \text{"Large region"} - \text{"Small Region"}                                           \\
+	         & = \frac{1}{2} \Delta \theta \left( r + \Delta r \right)^2 - \frac{1}{2} \Delta \theta r^2 \\
+	         & = r\Delta\theta r + \frac{1}{2} \Delta \theta \left( \Delta r \right)^2
+\end{align*}
+
+Neglecting th \( \left( \Delta r \right)^2 \) term, we get
+
+\[ \Delta A \approx r\Delta\theta\Delta r \]
+
+\begin{prop}
+	Suppose \( R \) is described in polar coordinates by \( a \leq r \leq b \) and \( \alpha \leq \theta \leq \beta \), then
+
+	\[ \iint_{R}fdA = \int_{r=a}^{b} \left[ \int_{\theta=\alpha}^{\beta} f\left( r\cos\theta,r\sin\theta \right)r d\theta \right] dr \]
+\end{prop}
+
+Here, \( dA = rd\theta dr \) is the infinitesimal area. Also, \( f\left( r\cos\theta,r\sin\theta \right) \) is simply \( f\left( x,y \right) \) in polar coordinates.
+
+\begin{eg}
+	Consider a  disc of radius \( t \). Its area is \( \pi t^2 \)
+
+	\begin{figure}[H]
+		\centering
+		\incfig{disc}
+	\end{figure}
+
+	It is described by \( R = \left\{ \left( 1,\theta \right): 0 \leq r \leq t, 0 \leq \theta \leq 2\pi \right\} \). We compute
+
+	\[ \iint_{R}dA = \int_{0}^{t} \left[ \int_{0}^{2\pi} r d\theta \right] dr  \]
+
+	\begin{align*}
+		\iint_{R}dA & = \int_{0}^{t} \left[ \int_{0}^{2\pi} r d\theta \right] dr \\
+		            & = 2\pi \int_{0}^{t} r dr                                   \\
+		            & = 2\pi \left[ \frac{r^2}{2} \right]_{0}^{t}                \\
+		            & = \pi t^2
+	\end{align*}
+
+\end{eg}
+
+\begin{eg}
+	We have \( R \) as before, we want to compute \( \iint_{R}fdA \) where
+
+	\[ f\left( x,y \right)=x^2+y^2 \]
+
+	Using polar coordinates, we get
+
+	\[ f\left( r\cos\theta,r\sin\theta \right) = r^2\left( \cos\theta \right)+r^2+\left( \sin\theta \right)^2 = r^2 \]
+
+	Our double integral is
+
+	\begin{align*}
+		\iint_{R}fdA & = \int_{0}^{t} \int_{0}^{2\pi} f\left( r\cos\theta,r\sin\theta\right)r d\theta dr \\
+		             & = \int_{0}^{t} \int_{0}^{2\pi} r^3 d\theta dr                                     \\
+		             & = 2\pi \int_{0}^{t} r^3 dr                                                        \\
+		             & = 2\pi \frac{1}{4} t^{4}                                                          \\
+		             & = \frac{\pi}{2}t^{4}
+	\end{align*}
+\end{eg}
+
+\subsection{Change in variables}
+
+We want to consider general coordinates \( \left( u,v \right) \) defined by
+
+\[ x = x\left( u,v \right), \quad y = y\left( u,v \right) \]
+
+How to integrate with \( \left( u,v \right) \)?
+
+\begin{definition}
+	The \textit{jacobian determinant} is defined by
+
+	\[ J\left( u,v \right) = \left| \begin{bmatrix}
+			\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+			\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+		\end{bmatrix} \right| = \frac{\partial x}{\partial u}\cdot \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v} \cdot  \frac{\partial y}{\partial u} \]
+\end{definition}
+
+\begin{eg}
+	Consider the polar coordinates
+
+	\[ x = r\cos\theta, \quad y = r\sin\theta \]
+
+	We want to compute \( J\left( r,\theta \right) \), we have
+
+	\[ J\left( r,\theta \right) = \left| \begin{bmatrix}
+			\frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} \\
+			\frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta}
+		\end{bmatrix} \right| = \left| \begin{bmatrix}
+			\cos\theta & -r\sin\theta \\
+			\sin\theta & r\cos\theta
+		\end{bmatrix} \right| \]
+
+	We obtain
+
+	\begin{align*}
+		J\left( r,\theta \right) & = \cos\theta \cdot r\cos\theta - \sin\theta \cdot \left( -r\sin\theta \right) \\
+		                         & = r\left( \left( \cos\theta \right)^2+\left( \sin\theta \right)^2 \right)     \\
+		                         & = r
+	\end{align*}
+
+	This correspons to \( r \) in \( dA = rd\theta dr \).
+\end{eg}
+
+The determinant should be intepreted as an area (up to certain signs).
+
+\begin{eg}
+	Given \( \vec{v}=\left( a,b \right) \) and \( \vec{u}=\left( 0,d \right) \), consider \( \left( 0,0 \right) \), \( \vec{v}=\left( a,b \right) \), \( \vec{w}=\left( 0,d \right) \), \( \vec{v}+\vec{w} = \left( a,b+d \right) \). These four points define a paralellogram.
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{paralellogram}
+	\end{figure}
+\end{eg}
+
+We claim that
+
+\[ A = \left| \text{ det} \begin{pmatrix}
+		a & b \\
+		0 & d
+	\end{pmatrix} \right| = \left| ad \right| \]
+
+We consider \( a, b, d > 0 \), then
+
+\[ A = a\left( b+d \right) - \frac{1}{2} ab = \frac{1}{2} ab = ad \]
+
+This is the same as the determinant. More generally, with
+
+\[  \]
 \end{document}
