@@ -191,18 +191,50 @@ The determinant should be intepreted as an area (up to certain signs).
 	\end{figure}
 \end{eg}
 
-We claim that
+we claim that
 
-\[ A = \left| \text{ det} \begin{pmatrix}
+\[ a = \left| \text{ det} \begin{pmatrix}
 		a & b \\
 		0 & d
 	\end{pmatrix} \right| = \left| ad \right| \]
 
-We consider \( a, b, d > 0 \), then
+we consider \( a, b, d > 0 \), then
 
-\[ A = a\left( b+d \right) - \frac{1}{2} ab = \frac{1}{2} ab = ad \]
+\[ a = a\left( b+d \right) - \frac{1}{2} ab = \frac{1}{2} ab = ad \]
 
-This is the same as the determinant. More generally, with
+this is the same as the determinant. more generally, with
 
+\[ \left( 0,0 \right), \vec{v}=\left( a,b \right), \quad \vec{w} = \left( c,d \right), \quad \vec{v}+\vec{w}=\left( a+c, b+d \right) \]
+
+\[ \left| \text{ det} \begin{pmatrix}
+		a & b \\
+		c & d
+	\end{pmatrix} \right| = \left| ab-bc \right| \]
+
+the idea of change of variables can be described by the following figure.
+
+
+\begin{figure}[h]
+	\centering
+	\incfig{changevariables}
+\end{figure}
 \[  \]
+\begin{theorem}
+	Change of variables.
+	\medskip
+
+	Let \( R \) be a region in cartesian coordinates
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{cartesiancoors}
+	\end{figure}
+
+	Let \( S \) be the corresponding region in \( \left( u,v \right) \)-coordinates, then
+
+	\[ \iint_{R} fdA = \iint_{S}f\left( x\left( u,v \right),y\left( u,v \right) \right)\left| J\left( u,v \right) \right|dudv \]
+\end{theorem}
+
+
 \end{document}
