@@ -129,14 +129,14 @@ Its volume is
 
 We approximate a region with boxes \( B_{i} \) of volumes \( \Delta v_{i} \). Pick a sample point \( \left( x_{i}^{\star},y_{i}^{\star},z_{i}^{\star} \right) \) in each \( B_{i} \). Given \( f\left( x,y,z \right) \) we consider
 
-\[ \sum_{i}^{} f\left(x_{i}^{\star},y_{i}^{\star},z_{i}^{\star}  \right)\Deltav_{i} \]
+\[ \sum_{i}^{} f\left(x_{i}^{\star},y_{i}^{\star},z_{i}^{\star}  \right)\Delta_{i} \]
 
 in the unit of the integral.
 
 \begin{definition}
 	The triple integral of \( f \) over \( t \) is
 
-	\[ \iiint_{T}fdV = \lim_{\Delta v_i\rightarrow 0} \sum_{i}^{} f\left(x_{i}^{\star},y_{i}^{\star},z_{i}^{\star}  \right)\Deltav_{i}    \]
+	\[ \iiint_{T}fdV = \lim_{\Delta v_i\rightarrow 0} \sum_{i}^{} f\left(x_{i}^{\star},y_{i}^{\star},z_{i}^{\star}  \right)\Delta_{i}    \]
 \end{definition}
 
 When \( f=1 \) we get the volume of \( T \). In the case of \( f > 0 \), it is less intuitive. How do we interpret \( \int_{T} fdV \)? We want to think of \( f \) as a local density.
