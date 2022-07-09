@@ -200,8 +200,62 @@ Boxes are usually the easiest regions to consider when doing a triple integral, 
 
 	\begin{align*}
 		\iiint_{T}fdV & = \int_{z=-1}^{1} \int_{y=0}^{1} \int_{x=0}^{1} z dx dy dz \\
+		              & = \int_{z=-1}^{1} \int_{y=0}^{1} z dy dz                   \\
+		              & = \left[ \frac{1}{2} z^2  \right]_{-1}^{1}                 \\
+		              & = \frac{1}{2} - \frac{1}{2}                                \\
+		              & = 0
+	\end{align*}
+
+	Interpretation: the contributions of \( f \) cancel over \( -1 \leq z \leq 1 \), notice that
+
+	\[ f\left( x,y,z \right) = -f\left( x,y,z \right) \]
+
+	and \( \left[ -1,1 \right] \) is unchanged under \( z \rightarrow -2 \).
+\end{eg}
+
+\subsection{General Regions}
+This is an analoguq of \( x \) and \( y \)-simple for double integrals. Suppose that we have
+
+\[ T = \left\{ \left( x,y,z \right): \left( x,y \right)\in D, \quad u_{1} \left( x,y \right) \leq z \leq u_{2} \left( x,y \right) \right\} \]
+
+
+\begin{figure}[H]
+	\centering
+	\incfig{doubleintsimple}
+\end{figure}
+
+We can interpret \( D \) as the projection of T in the \( xy- \)plane. It is also the domain og \( u_{1} \text{ and }u_{2}  \).
+
+\begin{prop}
+	Suppose \( T \) is a region as above, then
+
+	\[ \iiint_{T} fdV = \iint_{D}\left[ \int_{u_{1} \left( x,y \right)}^{u_{2} \left( x,y \right)} f\left( x,y,z \right) dz \right]dA \]
+\end{prop}
+
+\begin{eg}
+	Suppose \( T \) is of the form
+
+	\[ T = \left\{ \left( x,y,z \right): \left( x,y \right) \in D, \quad 0 \leq x \leq f\left( x,y \right) \right\} \]
+
+	Then we have
+
+	\begin{align*}
+		\iiint_{T} 1 dV & = \iint_{D}\left[\int_{0}^{f\left( x,y \right)}  dx 1dz \right]dA \\
+		                & = \iint_{D}f\left( x,y \right)dA
 	\end{align*}
 \end{eg}
 
+We get the double integral of \( f \) over \( D \), or the volume under the surface \( f\left( x,y \right) \). More generally, consider
 
+\[ u_{1} \left( x,y \right) \leq z \leq u_{2} \left( x,y \right) \]
+
+Then we have
+
+\begin{align*}
+	\iiint_{T}1dV & = \iint_{D}\left( u_{2} - u_{1}  \right)dA \\
+\end{align*}
+
+Which can be read as "volume under \( u_{2}  \)" - "volume under \( u_{1}  \)".
+
+\[  \]
 \end{document}

@@ -1,0 +1,37 @@
+\documentclass{article}
+\input{preamble.tex}
+
+\begin{document}
+\section{Lecture 17}
+\subsection{Triple Integrals}
+
+\begin{eg}
+	Let \( T \) be the region bounded by the \( xy- \)plane and the paraboloid
+
+	\[ g\left( x,y \right)=4-\left( x^2+y^2 \right) \]
+
+	Compute its volume, that is \( \iiint_{T}dV \). The \( xy \)-plane is \( z=0 \). For \( T \) we have
+
+	\[ 0 \leq z \leq 4-\left( x^2+y^2 \right) \]
+
+	We want to determine the projection of \( T \) in the \( xy- \)plane. We intersect \( z=g\left( x,y \right) \) with \( z=0 \). This means \( g\left( x,y \right)=0 \), and hence
+
+	\[ x^2+y^2=4 \]
+
+	We take all points inside this circle, that is
+
+	\[ D = \left\{ \left( x,y \right):x^2+y^2 \right\} \leq 4 \]
+
+	Its volume is
+
+
+	\begin{align*}
+		\iiint_{T}dV & = \iint_{D}\left[ \int_{0}^{g\left( x,y \right)} dz dA \right] \\
+		             & = \iint_{D}\left( 4-x^2-y^2 \right)dA
+	\end{align*}
+
+	We compute this in polar coords, the disc \( D \) is described by
+
+	\[ 0 \leq r \leq z, \quad 0 \leq \theta \leq 2\pi \]
+\end{eg}
+\end{document}
