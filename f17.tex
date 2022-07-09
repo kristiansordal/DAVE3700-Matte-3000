@@ -33,5 +33,192 @@
 	We compute this in polar coords, the disc \( D \) is described by
 
 	\[ 0 \leq r \leq z, \quad 0 \leq \theta \leq 2\pi \]
+
+	Using \( r^2=x^2+y^2 \), we get
+
+	\begin{align*}
+		\iint_{D} \left( 4-x^2-y^2 \right)dA & = \int_{r=0}^{2} \int_{\theta=0}^{2\pi} \left( 4-r^2 \right)r d\theta dr \\
+		                                     & = 2\pi \int_{r=0}^{2} \left( 4r-r^3 \right) dr                           \\
+		                                     & = 2\pi \left[ 4 \frac{r^2}{2}-\frac{r^{4}}{4} \right]_{0}^{2}            \\
+		                                     & = 8\pi
+	\end{align*}
+
+	These are analogous formlae for the case
+
+	\begin{align*}
+		 & u_{1} \left( y,z \right) \leq x \leq u_{2} \left( y,z \right) \\
+		 & u_{1} \left( x,z \right) \leq x \leq u_{2} \left(  x,z\right)
+	\end{align*}
 \end{eg}
+
+\subsection{Change of Variables}
+
+The general coors \( \left( u,v,w \right) \) are defined by
+
+\[ x = x\left( u,v,w \right), \quad y= y\left( u,v,w \right), \quad z = z\left( u,v,w \right) \]
+
+\begin{definition}
+	The Jacobian determinant is
+
+	\[ J\left( u,v,w \right) = \left| \begin{bmatrix}
+			x_{u} & x_{v} & x_{w} \\
+			y_{u} & y_{v} & y_{w} \\
+			z_{u} & z_{u} & z_{w}
+		\end{bmatrix} \right|  \]
+
+	Here we have that \( x_{u} = \frac{\partial x}{\partial u} \), and so on.
+\end{definition}
+
+\begin{theorem}
+	Change of Variables
+	\medskip
+
+	Let \( T \) be a region described in \( \left( x,y,z \right) \) coords.
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{tregion}
+	\end{figure}
+
+	Let \( T' \) be the corresponding region in \( \left( u,v,w \right) \).
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{uvwtregion}
+	\end{figure}
+
+	Then we have
+
+	\[ \int_{T}fdV = \int_{T'}f\left( x\left( u,v,w \right),y\left( u,v,w \right),z\left( u,v,w \right) \right) \cdot \left| J\left( u,v,w \right) \right|dudvdw \]
+
+	We can express this as
+
+	\[ \int_{T}fdV = \int_{T'}fdV' \]
+
+	Where \( dv = dxdydz \) and \( dV' = \left| J\left( u,v,w \right) \right| dudvdw\)
+\end{theorem}
+
+\subsection{Cylindrical Coordinates}
+\begin{definition}
+	The cylindrical coordinates \( \left( r,\theta,x \right) \) are
+
+	\[ x=r\cos\theta, \quad y=r\sin\theta, z=z \]
+
+	Their range are respectively
+
+	\[ 0 \leq r \leq \infty, \quad 0 \leq \theta \leq 2\pi, \quad -\infty \leq z \leq \infty \]
+
+
+\end{definition}
+
+The geometrical interpretation is shown in the figure below.
+
+\begin{figure}[H]
+	\centering
+	\incfig{cylindrical}
+\end{figure}
+
+\( z \) is the same as in the cartesian case, \( \left( r,\theta \right) \) are the same as in the polar case. How does this relate to cylinders?
+
+\begin{eg}
+	We consider a solid cylinder with radius \( t \) and height \( h \).
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{cylinder}
+	\end{figure}
+
+	This cylinder is described by
+
+	\[ T = \left\{ \left( x,y,z \right): x^2+y^2 \leq t^2, \quad 0 \leq z \leq h \right\} \]
+
+	Passing to cylindrical coords, the disc \( x^2+y^2 \leq t^2 \) becomes
+
+	\[ 0 \leq r \leq t^2, \quad 0 \leq \theta \leq 2\pi \]
+
+	Then we get the region
+
+	\[ T' = \left\{ \left( r, \theta,z \right): 0 \leq r \leq t,\quad 0 \leq \theta \leq t, \quad 0 \leq z \leq h \right\} \]
+
+\end{eg}
+
+\begin{note}
+	In cylindrical coords, the cylinder \( T \) becomes the box \( T' \)
+
+
+	\begin{figure}[H]
+		\centering
+		\incfig{boxt}
+	\end{figure}
+\end{note}
+
+\begin{prop}
+	For the cylindrical coords, we have
+
+	\[ dV = rd\theta drdz \]
+\end{prop}
+
+\begin{proof}
+	The Jacobian is
+
+	\[ J\left( r,\theta,z \right)=\left| \begin{bmatrix}
+			\cos\theta & -r\sin\theta & 0 \\
+			\sin\theta & r\cos\theta  & 0 \\
+			0          & 0            & 1
+		\end{bmatrix} \right| \]
+
+	The determinant is
+
+	\[ J\left( r,\theta,z \right)-\left| \begin{bmatrix}
+			\cos\theta & -r\sin\theta \\
+			\sin\theta & r\cos\theta
+		\end{bmatrix} \right|=r \]
+\end{proof}
+
+\begin{eg}
+	Consider again the cylinder \( T \) as before, then we compute
+
+
+	\begin{align*}
+		\iiint_{T}dV & = \int_{r=0}^{t} \int_{\theta=0}^{2\pi} \int_{z=0}^{h} r dz d\theta dr \\
+		             & = 2\pi h \int_{r=0}^{t} rdr                                            \\
+		             & = 2\pi h \cdot  \frac{1}{2} t^2                                        \\
+		             & = \pi t^2 h
+	\end{align*}
+
+	This returns the familiar formula.
+\end{eg}
+
+\subsection{Spherical Coordinates}
+\begin{definition}
+	The spherical coords \( \left( \rho, \phi, \theta \right) \) are
+
+	\[ x=\rho\sin\phi\cos\theta,\quad y=\rho\sin\phi\sin\theta,\quad z=\rho\cos\phi \]
+
+	Their range is
+
+	\[ 0 \leq \rho \leq \infty,\quad 0 \leq \phi \leq \pi, \quad 0 \leq \theta \leq 2\pi \]
+
+	\begin{note}
+		Only \( \phi \) goes to \( \pi \).
+	\end{note}
+\end{definition}
+
+
+\begin{observe}
+	We have the following relations
+
+	\[ \rho = \sqrt{x^2+y^2+z^2}, \tan\theta=\frac{y}{x}  \]
+\end{observe}
+
+The geometrical meaning is as follows
+
+
+\begin{figure}[H]
+	\centering
+	\incfig{sphericalgeo}
+\end{figure}
 \end{document}
